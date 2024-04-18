@@ -3,13 +3,12 @@ package ru.example.model;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @AllArgsConstructor
 @Getter
-@Document(collection = "videos")
-public class VideoDocument {
+@org.springframework.data.mongodb.core.mapping.Document(collection = "videos")
+public class Document {
     @Id
     private final String id;
     @Field("category")
