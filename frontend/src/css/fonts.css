@@ -1,0 +1,33 @@
+/* Circe */
+@font-face {
+  font-family: 'Circe';
+  src: local('Circe Regular'), local('Circe-Regular'),
+    url('../fonts/Circe-Regular.woff2') format('woff2'),
+    url('../fonts/Circe-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: local('Circe Bold'), local('Circe-Bold'),
+    url('../fonts/Circe-Bold.woff2') format('woff2'),
+    url('../fonts/Circe-Bold.woff2') format('woff');
+  font-weight: bold;
+}
+
+/* PT Sans */
+@font-face {
+  font-family: 'PT Sans';
+  font-weight: normal;
+  font-display: swap;
+  src: local('PT Sans'), local('PT-Sans'),
+    url(../fonts/PT-Sans-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-display: swap;
+  src: local('PT Sans Bold'), local('PT-Sans-Bold'),
+    url(../fonts/PT-Sans-bold.woff2) format('woff2');
+}

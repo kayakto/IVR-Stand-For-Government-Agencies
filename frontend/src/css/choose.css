@@ -1,0 +1,35 @@
+.choose_wrap {
+    gap: 24px;
+}
+
+.choose-link-div {
+    position: relative;
+    justify-content: center;
+    padding-top: 110px;
+    height: 526px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top 110px center;
+    
+}
+
+.choose-link-div .btn-red {
+    border-radius: 0 0 10px 10px;
+}
+
+.to-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.choose-div-1 {
+    background-image: url('../img/choose1.png');
+    background-position: top 140px center;
+}
+
+.choose-div-2 {
+    background-image: url('../img/choose2.png');
+}
