@@ -1,7 +1,7 @@
 .greeting {
   margin-bottom: 60px;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 110%;
   text-align: center;
 }
@@ -11,9 +11,4 @@
   border-radius: 10px;
   max-height: 416px;
   margin-bottom: var(--col-gap);
-}
-
-.wrap {
-  align-items: center;
-  flex-direction: column;
 }
