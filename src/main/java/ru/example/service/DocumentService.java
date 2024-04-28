@@ -14,4 +14,8 @@ public class DocumentService {
     public Document findById(String id) {
         return repository.findById(id).orElse(null);
     }
+
+    public List<Document> findByWords(String words) {
+        return repository.findByText(words); // TODO
+    }
 }

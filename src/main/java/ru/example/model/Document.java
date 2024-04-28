@@ -12,17 +12,15 @@ public class Document {
     @Id
     private final String id;
     @Field("category")
-    private final String category;
-    @Field("keywords")
-    private final String[] keywords;
-    @Field("parent")
-    private final String parent;
+    private final String category;// TODO delete
     @Field("text_simple")
     private final String textSimple;
-    @Field("text_russian")
-    private final String textRussian;
     @Field("video_url")
     private final String videoURL;
     @Field("children")
     private final String[] children;
+    @Field("info_children")
+    private final String[] infoChildren;
+    @Field("is_searchable")
+    private final String[] isSearchable;
 }
