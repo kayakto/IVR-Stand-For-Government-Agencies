@@ -1,0 +1,35 @@
+.choose_wrap {
+    gap: 24px;
+    flex-grow: 1;
+    justify-content: center;
+    width: 100%;
+}
+
+.choose-link-div {
+    flex-grow: 1;
+    max-width: 500px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top 110px center;
+    
+}
+
+.choose-link-div button {
+    margin-top: auto;
+    flex-grow: 1;
+}
+
+.choose-link-div .btn-red {
+    border-radius: 0 0 10px 10px;
+}
+
+.choose-div-1 {
+    background-image: url('../img/choose1.png');
+    background-position: top 140px center;
+}
+
+.choose-div-2 {
+    background-image: url('../img/choose2.png');
+}

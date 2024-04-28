@@ -1,0 +1,43 @@
+/* Сброс стилей для кнопок */
+.btn-reset {
+  display: flex;
+  margin: 0;
+  height: 86px;
+  border: none;
+  border-radius: 10px;
+  font-size: 32px;
+  place-items: center;
+  justify-content: center;
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Кнопка возврата к предыдущей странице (сверху около заголовка) */
+.btn-back {
+  background-color: transparent;
+  padding-bottom: 10px;
+}
+
+/* Красная кнопка  */
+.btn-red {
+  background-color: var(--red-100);
+}
+
+.btn-red:hover {
+  background-color: var(--red-80);
+}
+/* Бежевая кнопка */
+.btn-beige {
+  background-color: var(--beige-100);
+}
+
+.btn-beige:hover {
+  background-color: var(--beige-80);
+}
+/* Неактивная кнопка */
+.btn-inactive {
+  background-color: var(--grey-40);
+  cursor: default;
+}

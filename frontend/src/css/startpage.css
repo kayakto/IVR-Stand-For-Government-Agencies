@@ -1,0 +1,14 @@
+.greeting {
+  margin-bottom: 60px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 110%;
+  text-align: center;
+}
+
+.greeting-video {
+  display: block;
+  border-radius: 10px;
+  max-height: 416px;
+  margin-bottom: var(--col-gap);
+}
