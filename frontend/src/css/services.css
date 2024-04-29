@@ -9,7 +9,9 @@
 }
 
 .service-item {
-  max-width: 626px;
+  flex-basis: 510px;
+  flex-shrink: 1;
+  flex-grow: 1;
   height: 196px;
   padding: 0 30px;
   gap: 15px;
