@@ -11,21 +11,11 @@ const ChooseLang = () => {
         Пожалуйста, выберите способ взаимодействия
       </h1>
       <div className="flex choose_wrap">
-        <Link
-          to="/standart-list"
-          className="choose-link-div choose-div-1 flex"
-        >
-          <button className="btn-reset btn-red">
-            Простой язык
-          </button>
+        <Link to="/standart-list" className="choose-link-div choose-div-1 flex">
+          <button className="btn-reset btn-red">Простой язык</button>
         </Link>
-        <Link
-          to="/ivr-list"
-          className="choose-link-div choose-div-2 flex"
-        >
-          <button className="btn-reset btn-red">
-            Язык жестов
-          </button>
+        <Link to="/ivr-list" className="choose-link-div choose-div-2 flex">
+          <button className="btn-reset btn-red">Язык жестов</button>
         </Link>
       </div>
     </>
