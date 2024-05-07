@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
+import ru.example.controller.dto.VideoDocumentDTO;
 
 @AllArgsConstructor
 @Getter
@@ -22,5 +23,9 @@ public class Document {
     @Field("info_children")
     private final String[] infoChildren;
     @Field("is_searchable")
-    private final String[] isSearchable;
+    private final boolean isSearchable;
+
+    public VideoDocumentDTO toVideoDocumentDTO() {
+        return new VideoDocumentDTO(id, textSimple, videoURL, children, infoChildren);
+    }
 }

@@ -17,7 +17,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     compileOnly("org.projectlombok:lombok")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
-    implementation("org.elasticsearch.client:elasticsearch-rest-high-level-client:7.17.20")
     implementation("org.springdoc:springdoc-openapi-ui:1.6.3")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
