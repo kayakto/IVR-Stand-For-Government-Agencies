@@ -12,7 +12,7 @@ import './css/choose.css';
 import './css/service-page.css'
 import App from './App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementsByClassName('container')[0]).render(
     <React.StrictMode>
       <BrowserRouter>
         <App />

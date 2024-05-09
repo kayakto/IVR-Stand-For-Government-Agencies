@@ -1,5 +1,5 @@
 :root {
-  --red-100: #e04e39; 
+  --red-100: #e04e39;
   --red-80: #e67161;
   --beige-100: #c39367;
   --beige-80: #cfa985;
@@ -27,20 +27,19 @@
 
 body {
   height: 100%;
-  background: linear-gradient(145deg, #f3e9e1 0%, #f3b8b0 100%);
+  background-color: #f3e9e1;
 }
 
 .container {
   flex-direction: column;
-  align-items: center;
   height: 95vh;
-  max-height: 804px;
-  padding: 50px;
-  max-width: 1396px;
-  width: 95vw;
-  border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  max-height: 790px;
+  width: 100%;
+  max-width: 1840px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
 }
 
 .title {
@@ -67,5 +66,3 @@ body {
   font-size: 0;
   gap: var(--col-gap);
 }
-
-
