@@ -79,7 +79,7 @@ const VideoList = () => {
                     <h2 className="subtitle title">{serviceList.length} вариантов</h2>
                 </div>
                 <div className="btn-area flex">
-                    <button onClick={navigate('/ivr-list/search')} className="btn-reset span-2 btn-beige">Поиск</button>
+                    <button onClick={() => navigate('/ivr-list/search')} className="btn-reset span-2 btn-beige">Поиск</button>
                     <button className="btn-reset span-2 btn-red">Помощь</button>
                 </div>
             </div>
