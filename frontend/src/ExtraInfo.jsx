@@ -8,7 +8,7 @@ const ExtraInfo = () => {
   const infCh = location.state ? location.state.infoChild : [];
   const id = location.state ? location.state.id : '0';
   const navigate = useNavigate();
-  // фетчить прикол
+  // TODO  фетчить прикол
 
   const infoTemp = [
     {

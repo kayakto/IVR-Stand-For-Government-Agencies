@@ -8,7 +8,7 @@ const Post = (props) => {
       <img src="src\img\testOffer.svg" alt="" />
       <div className="service-text">
         <h3 className="service-title">{props.data.textSimple}</h3>
-        <p className="service-descr">{props.data.textRussian}</p>
+        {/* <p className="service-descr">{props.data.textRussian ? props.data.textRussian : "" }</p> */}
       </div>
     </>
   ) : (
@@ -16,7 +16,7 @@ const Post = (props) => {
       <img src="src\img\testOffer.svg" alt="" />
       <div className="service-text">
         <h3 className="service-title">{props.data.textSimple}</h3>
-        <p className="service-descr">{props.data.textRussian}</p>
+        {/* <p className="service-descr">{props.data.textRussian}</p> */}
       </div>
     </Link>
   );
