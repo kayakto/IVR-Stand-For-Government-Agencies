@@ -1,9 +1,10 @@
 import React, { useDeferredValue, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, json, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Post from './components/Post';
 import BackArrowList from './components/BackArrowList';
 import { useLocalObservable } from 'mobx-react-lite';
+import axios from 'axios';
 import {
   setStateItem,
   getStateItem,
@@ -13,22 +14,6 @@ import {
 const SimpleList = () => {
   const [offers, setOffers] = useState([]);
 
-  const tempChild1 = [
-    {
-      id: '2',
-      parrent: '1',
-      textSimple: 'Тут мало текста',
-      textRussian: 'Внесение денег на карту фронтендеру на тинькофф',
-      children: ['2', '2'],
-    },
-    {
-      id: '3',
-      parrent: '1',
-      textSimple: 'А тут очень много',
-      textRussian: 'Внесение денег на карту фронтендеру на сбер',
-      children: ['333'],
-    },
-  ];
 
   const servicesHistory = useLocalObservable(() => ({
     history: [],
@@ -42,16 +27,18 @@ const SimpleList = () => {
     },
   }));
 
-  const goDeep = () => {
+  const goDeep = (children) => {
     servicesHistory.addToHistory(offers);
-    setOffers(tempChild1);
+
+    axios.get(`http://localhost:8080/api/videoDoc?ids=${children.join('ids=')}'`)
+    .then(res => res.data).then(data => setOffers(data))
+    .catch(e => console.log(e))
   };
 
   const navigate = useNavigate();
 
   const test = () => {
     if (servicesHistory.history.length > 0) {
-      // alert('yes')
       const prevState = servicesHistory.getFromHistory();
       setOffers(prevState);
     } else {
@@ -60,49 +47,9 @@ const SimpleList = () => {
   };
 
   useEffect(() => {
-    setOffers([
-      {
-        id: '1',
-        parrent: '',
-        textSimple: 'Внесение денег на карту фронтендеру',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2', '3'],
-      },
-      {
-        id: '4',
-        parrent: '',
-        textSimple: 'Внесение денег на карту фронтендеру',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2', '3'],
-      },
-      {
-        id: '5',
-        parrent: '',
-        textSimple: 'Внесение денег на карту фронтендеру',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2', '3'],
-      },
-      {
-        id: '6',
-        parrent: '',
-        textSimple: 'Тут один ребенок',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['3'],
-      },
-      {
-        id: '7',
-        parrent: '',
-        textSimple: 'Тут тоже',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2'],
-      },
-    ]);
-  }, []);
+   axios.get('http://localhost:8080/api/videoDoc/main')
+   .then(res => res.data).then(data => setOffers(data))
+   .catch(e => console.log(e))}, []);
 
   return (
     <>
@@ -125,7 +72,7 @@ const SimpleList = () => {
               <li
                 className="service-item flex"
                 key={post.id}
-                onClick={() => goDeep()}
+                onClick={() => goDeep(post.children)}
               >
                 <Post data={post} childCount={post.children.length} />
               </li>

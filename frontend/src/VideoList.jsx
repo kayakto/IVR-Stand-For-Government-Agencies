@@ -3,6 +3,7 @@ import { useLocalObservable } from 'mobx-react-lite';
 import { useNavigate } from 'react-router-dom';
 import BackArrowList from './components/BackArrowList';
 import VideoPost from './components/VideoPost';
+import axios from 'axios';
 
 
 const VideoList = () => {
@@ -34,41 +35,18 @@ const VideoList = () => {
     }
 
     const goDeep = () => {
-        servicesHistory.addToHistory(serviceList)
-        setServiceList(tempChild1)
+        servicesHistory.addToHistory(offers);
+
+        axios.get(`http://localhost:8080/api/videoDoc?ids=${children.join('ids=')}'`)
+        .then(res => res.data).then(data => setOffers(data))
+        .catch(e => console.log(e))
       }
 
-    const tempChild1 = [
-        {
-            id: '228',
-            parrent: '4',
-            textSimple: 'КАКОЙ ХОРОШИЙ ДЕНЬ',
-            textRussian: 'чтобы подарить цветов',
-            children: ['1488', '123'],
-            videoUrl: 'src/img/gif.gif'
-        }
-    ]
 
     useEffect(() => {
-        setServiceList([
-            {
-                id: '1',
-                parrent: '',
-                textSimple: 'Внесение денег на карту фронтендеру',
-                textRussian: 'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-                children: ['2', '3'],
-                videoUrl: 'src/img/gif.gif'
-            },
-            {
-                id: '4',
-                parrent: '',
-                textSimple: 'Внесение денег на карту фронтендеру',
-                textRussian: 'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-                children: ['2'],
-                videoUrl: 'src/img/gif2.gif'
-            }
-        ])
-    }, [])
+        axios.get('http://localhost:8080/api/videoDoc/main').then(res => res.data).then(data => setOffers(data))
+        .catch(e => console.log(e))}, [])
+    
 
     return (
         <>
@@ -79,7 +57,7 @@ const VideoList = () => {
                     <h2 className="subtitle title">{serviceList.length} вариантов</h2>
                 </div>
                 <div className="btn-area flex">
-                    <button className="btn-reset span-2 btn-beige">Поиск</button>
+                    <button onClick={() => navigate('/ivr-list/search')} className="btn-reset span-2 btn-beige">Поиск</button>
                     <button className="btn-reset span-2 btn-red">Помощь</button>
                 </div>
             </div>
