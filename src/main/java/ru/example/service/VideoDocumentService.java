@@ -2,20 +2,21 @@ package ru.example.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ru.example.model.Document;
-import ru.example.model.DocumentRepository;
+import ru.example.model.VideoDocument;
+import ru.example.model.VideoDocumentRepository;
+
 import java.util.List;
 
 @Component
-public class DocumentService {
+public class VideoDocumentService {
     @Autowired
-    private DocumentRepository repository;
+    private VideoDocumentRepository repository;
 
-    public Document findById(String id) {
+    public VideoDocument findById(String id) {
         return repository.findById(id).orElse(null);
     }
 
-    public List<Document> findByWords(String words) {
+    public List<VideoDocument> findByWords(String words) {
         return repository.findByText(words); // TODO
     }
 }

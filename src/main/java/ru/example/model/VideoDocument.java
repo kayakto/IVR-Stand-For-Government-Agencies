@@ -3,17 +3,16 @@ package ru.example.model;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import ru.example.controller.dto.VideoDocumentDTO;
 
 @AllArgsConstructor
 @Getter
-@org.springframework.data.mongodb.core.mapping.Document(collection = "videos")
-public class Document {
+@Document(collection = "videos")
+public class VideoDocument {
     @Id
     private final String id;
-    @Field("category")
-    private final String category;// TODO delete
     @Field("text_simple")
     private final String textSimple;
     @Field("video_url")

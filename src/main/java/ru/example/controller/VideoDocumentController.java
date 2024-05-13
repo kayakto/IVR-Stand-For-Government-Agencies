@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.example.controller.dto.VideoDocumentDTO;
-import ru.example.model.Document;
-import ru.example.service.DocumentService;
+import ru.example.model.VideoDocument;
+import ru.example.service.VideoDocumentService;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +21,7 @@ import java.util.List;
 @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "OK")})
 public class VideoDocumentController {
     @Autowired
-    private DocumentService documentService;
+    private VideoDocumentService videoDocumentService;
 
     private final List<String> MainVideoDocumentsIds = List.of(new String[]{
             "6612ad7253c466832b383ae7",
@@ -42,7 +42,7 @@ public class VideoDocumentController {
     public ResponseEntity<VideoDocumentDTO> getVideoDocument(
             @Parameter(description = "Уникальный идентификатор документа", example = "66141d446df3a0792d1c2fe7")
             @PathVariable("id") String id){
-        Document document = documentService.findById(id);
+        VideoDocument document = videoDocumentService.findById(id);
 
         if (document == null)
             return ResponseEntity.noContent().build();
@@ -65,7 +65,7 @@ public class VideoDocumentController {
         List<VideoDocumentDTO> foundedDocuments = new ArrayList<>();
 
         for (String id: ids) {
-            Document document = documentService.findById(id);
+            VideoDocument document = videoDocumentService.findById(id);
             if (document != null) {
                 VideoDocumentDTO foundedDocument = document.toVideoDocumentDTO();
                 foundedDocuments.add(foundedDocument);
@@ -87,12 +87,12 @@ public class VideoDocumentController {
             @PathVariable("text")
             String text) {
         List<VideoDocumentDTO> result = new ArrayList<>();
-        List<Document> founded = documentService.findByWords(text);
+        List<VideoDocument> founded = videoDocumentService.findByWords(text);
 
         if (founded.isEmpty())
             return ResponseEntity.noContent().build();
 
-        for (Document document: founded) {
+        for (VideoDocument document: founded) {
             result.add(document.toVideoDocumentDTO());
         }
 

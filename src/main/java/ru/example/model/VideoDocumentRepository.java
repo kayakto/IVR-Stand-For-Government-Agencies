@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DocumentRepository extends MongoRepository<Document, String> {
+public interface VideoDocumentRepository extends MongoRepository<VideoDocument, String> {
     @Query("{ $text: { $search: ?0 }, is_searchable: true }")
-    List<Document> findByText(String searchText);
+    List<VideoDocument> findByText(String searchText);
 }
