@@ -14,8 +14,8 @@ public class VideoDocumentDTO { // maybe record???
     private final String textSimple;
     @Schema(description = "Ссылка на видео", example = "https://storage.yandexcloud.net/akhidov-ivr/long.mp4")
     private final String videoURL;
-    @Schema(description = "Массив дочерних записей", example = "[\"661415256df3a0792d1c2fe3\", \"66141d446df3a0792d1c2fe7\"]")
+    @Schema(description = "Массив дочерних записей", example = "[\"661415256df3a0792d1c2fe3\"]")
     private final String[] children;
-    @Schema(description = "Массив с идентификаторами дополнительной информации", example = "[\"66141f3c6df3a0792d1c2fea\"]")
+    @Schema(description = "Массив с идентификаторами дополнительной информации", example = "null")
     private final String[] infoChildren;
 }
