@@ -18,7 +18,7 @@ const VideoPost = (props) => {
       </div>
     </li>
   ) : (
-    <Link to={`/ivr-list/${props.childId}`} state={{ id: props.childId }}>
+    <Link to={`/ivr-list/${props.childId}`} state={{ id: props.childId, name: props.data.textSimple }}>
       <li
         style={{
           backgroundImage: `url(${props.data.videoURL})`,
@@ -30,9 +30,6 @@ const VideoPost = (props) => {
           <h3 className="service-title ivr-list-title">
             {props.data.textSimple}
           </h3>
-          {/* <p className="service-descr ivr-list-descr">
-            {props.data.textRussian}
-          </p> */}
         </div>
       </li>
     </Link>
