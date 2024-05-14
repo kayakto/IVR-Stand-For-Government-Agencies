@@ -1,23 +1,19 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import BackArrowList from './components/BackArrowList';
+import axios from 'axios';
 
 const SimpleOfferPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const id = location.state ? location.state.id : '0';
-  const tempPost = {
-    id: '2',
-    parrent: '4',
-    textSimple: 'Какая-то там услуга',
-    textRussian:
-      'Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quidem temporibus voluptatibus explicabo obcaecati corrupti iusto dolorem illo delectus pariatur aperiam eius, omnis vel numquam ab adipisci sequi totam unde!',
-    children: [],
-    videoUrl:
-      'https://avatars.dzeninfra.ru/get-zen_doc/1718701/pub_5e297d28df944400bd8adbd0_5e297f0143fdc000af4d03ba/orig',
-    infoChild: ['1', '4', '3'],
-  };
+  const [service, setService] = useState({})
+  const id = useRef(location.state ? location.state.id : '0')
 
+  useEffect(() => {
+    
+    axios.get(`http://localhost:8080/api/videoDoc/${id.current}`).then(res => res.data).then(data => setService(data))
+    .catch(e => console.log(e))
+  },[])
   return (
     <>
       <div className="top-section flex">
@@ -27,13 +23,13 @@ const SimpleOfferPage = () => {
               navigate(-1);
             }}
           />
-          <h2 className="title mr-auto">{tempPost.textSimple}</h2>
+          <h2 className="title mr-auto">{location.state ? location.state.name : ''}</h2>
         </div>
         <div className="service-wrap flex">
-          {tempPost.infoChild.length && (
+          {service.infoChildren && (
             <Link
               to={`/standart-list/${id}/info`}
-              state={{ id: id, infCh: tempPost.infoChild }}
+              state={{ id: id, infCh: service.infoChildren}}
             >
               <button className="btn-reset btn-beige span-3">Подробнее</button>
             </Link>
@@ -43,7 +39,7 @@ const SimpleOfferPage = () => {
       </div>
 
       <div className="services-info-section flex">
-        <p className="services-info-descr span-12">{tempPost.textRussian}</p>
+        <p className="services-info-descr span-12">{service.textSimple}</p>
       </div>
     </>
   );

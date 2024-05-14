@@ -27,10 +27,10 @@ const SimpleList = () => {
     },
   }));
 
-  const goDeep = (children) => {
+  const goDeep = async (children) => {
     servicesHistory.addToHistory(offers);
-
-    axios.get(`http://localhost:8080/api/videoDoc?ids=${children.join('ids=')}'`)
+    const address = children.join('&ids=')
+    await axios.get(`http://localhost:8080/api/videoDoc?ids=${address}`)
     .then(res => res.data).then(data => setOffers(data))
     .catch(e => console.log(e))
   };
@@ -79,7 +79,6 @@ const SimpleList = () => {
             ) : (
               <li className="service-item flex" key={post.id}>
                 <Post
-                  
                   data={post}
                   childCount={post.children.length}
                   childId={post.children[0]}

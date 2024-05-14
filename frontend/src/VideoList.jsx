@@ -34,17 +34,17 @@ const VideoList = () => {
         }
     }
 
-    const goDeep = () => {
-        servicesHistory.addToHistory(offers);
-
-        axios.get(`http://localhost:8080/api/videoDoc?ids=${children.join('ids=')}'`)
-        .then(res => res.data).then(data => setOffers(data))
-        .catch(e => console.log(e))
+    const goDeep = async (children) => {
+      servicesHistory.addToHistory(serviceList);
+      const address = children.join('&ids=')
+      await axios.get(`http://localhost:8080/api/videoDoc?ids=${address}`)
+      .then(res => res.data).then(data => setServiceList(data))
+      .catch(e => console.log(e))
       }
 
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/videoDoc/main').then(res => res.data).then(data => setOffers(data))
+        axios.get('http://localhost:8080/api/videoDoc/main').then(res => res.data).then(data => setServiceList(data))
         .catch(e => console.log(e))}, [])
     
 
@@ -67,7 +67,7 @@ const VideoList = () => {
           <div className="service-ivr-list col flex span-12">
             {serviceList.map(post => 
               post.children.length > 1 ? (
-                <div key ={post.id} onClick={() => goDeep()}>
+                <div key ={post.id} onClick={() => goDeep(post.children)}>
                   <VideoPost data={post} childCount={post.children.length} />
                 </div>
               ) : (<VideoPost key ={post.id} data={post} childCount={post.children.length} childId={post.children[0]}/>))
