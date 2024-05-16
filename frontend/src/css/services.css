@@ -59,3 +59,12 @@
   color: #fff;
 }
 
+.service-ivr-item-bg {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+}

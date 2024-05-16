@@ -13,6 +13,7 @@ import {
 
 const SimpleList = () => {
   const [offers, setOffers] = useState([]);
+  const [title, setTitle] = useState('Услуги')
 
 
   const servicesHistory = useLocalObservable(() => ({
@@ -27,9 +28,23 @@ const SimpleList = () => {
     },
   }));
 
-  const goDeep = async (children) => {
+  const titleHistory = useLocalObservable(() => ({
+    history: [],
+
+    addToHistory(newState) {
+      this.history.push(newState);
+    },
+
+    getFromHistory() {
+      return this.history.pop();
+    },
+  }));
+
+  const goDeep = async (post) => {
     servicesHistory.addToHistory(offers);
-    const address = children.join('&ids=')
+    titleHistory.addToHistory(title)
+    const address = post.children.join('&ids=')
+    setTitle(post.textSimple)
     await axios.get(`http://localhost:8080/api/videoDoc?ids=${address}`)
     .then(res => res.data).then(data => setOffers(data))
     .catch(e => console.log(e))
@@ -39,8 +54,10 @@ const SimpleList = () => {
 
   const test = () => {
     if (servicesHistory.history.length > 0) {
-      const prevState = servicesHistory.getFromHistory();
-      setOffers(prevState);
+      const prevServiceState = servicesHistory.getFromHistory();
+      const prevTitleState = titleHistory.getFromHistory()
+      setOffers(prevServiceState);
+      setTitle(prevTitleState)
     } else {
       navigate(-1);
     }
@@ -56,12 +73,12 @@ const SimpleList = () => {
       <div className="top-section flex">
         <div className="top-text flex">
           <BackArrowList back={() => test()} />
-          <h2 className="title">Услуги</h2>
+          <h2 className="title">{title}</h2>
           <h2 className="subtitle title">{offers.length} вариантов</h2>
         </div>
         <div className="btn-area flex">
           <button className="btn-reset span-2 btn-beige">Поиск</button>
-          <button className="btn-reset span-2 btn-red">Помощь</button>
+          <button onClick={() => navigate('/choose')} className="btn-reset span-2 btn-brown">Язык</button>
         </div>
       </div>
 
@@ -72,7 +89,7 @@ const SimpleList = () => {
               <li
                 className="service-item flex"
                 key={post.id}
-                onClick={() => goDeep(post.children)}
+                onClick={() => goDeep(post)}
               >
                 <Post data={post} childCount={post.children.length} />
               </li>

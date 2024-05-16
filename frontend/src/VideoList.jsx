@@ -9,6 +9,7 @@ import axios from 'axios';
 const VideoList = () => {
 
     const [serviceList, setServiceList] = useState([])
+    const [title, setTitle] = useState('Услуги')
 
     const servicesHistory = useLocalObservable(() => ({
         history: [],
@@ -22,11 +23,25 @@ const VideoList = () => {
         }
     }))
 
+    const titleHistory = useLocalObservable(() => ({
+      history: [],
+  
+      addToHistory(newState) {
+        this.history.push(newState);
+      },
+  
+      getFromHistory() {
+        return this.history.pop();
+      },
+    }));
+
     const navigate = useNavigate()
 
     const test = () => {
         if (servicesHistory.history.length > 0) {
             const prevState = servicesHistory.getFromHistory()
+            const prevTitleState = titleHistory.getFromHistory()
+            setTitle(prevTitleState)
             setServiceList(prevState)
         }
         else {
@@ -34,9 +49,11 @@ const VideoList = () => {
         }
     }
 
-    const goDeep = async (children) => {
+    const goDeep = async (post) => {
       servicesHistory.addToHistory(serviceList);
-      const address = children.join('&ids=')
+      titleHistory.addToHistory(title)
+      setTitle(post.textSimple)
+      const address = post.children.join('&ids=')
       await axios.get(`http://localhost:8080/api/videoDoc?ids=${address}`)
       .then(res => res.data).then(data => setServiceList(data))
       .catch(e => console.log(e))
@@ -53,12 +70,12 @@ const VideoList = () => {
             <div className="top-section flex">
                 <div className="top-text flex">
                     <BackArrowList back={() => test()} />
-                    <h2 className="title">Услуги</h2>
+                    <h2 className="title">{title}</h2>
                     <h2 className="subtitle title">{serviceList.length} вариантов</h2>
                 </div>
                 <div className="btn-area flex">
                     <button onClick={() => navigate('/ivr-list/search')} className="btn-reset span-2 btn-beige">Поиск</button>
-                    <button className="btn-reset span-2 btn-red">Помощь</button>
+                    <button onClick={() => navigate('/choose')} className="btn-reset span-2 btn-brown">Язык</button>
                 </div>
             </div>
 
@@ -67,7 +84,7 @@ const VideoList = () => {
           <div className="service-ivr-list col flex span-12">
             {serviceList.map(post => 
               post.children.length > 1 ? (
-                <div key ={post.id} onClick={() => goDeep(post.children)}>
+                <div key ={post.id} onClick={() => goDeep(post)}>
                   <VideoPost data={post} childCount={post.children.length} />
                 </div>
               ) : (<VideoPost key ={post.id} data={post} childCount={post.children.length} childId={post.children[0]}/>))

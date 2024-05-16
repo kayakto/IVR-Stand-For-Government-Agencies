@@ -34,8 +34,8 @@ const IvrServicePage = () => {
         </div>
       </div>
       <div className="span-6 ivr-info-wrap flex">
-        <button className="btn-reset btn-red span-3">Помощь</button>
-        {service.infoChildren && (
+        <button onClick={() => navigate('/choose')} className="btn-reset btn-brown span-3">Язык</button>
+        {(service.infoChildren && service.infoChildren[0] != 'null') && (
           <Link
             to={`/ivr-list/${id}/info`}
             state={{ addInfo: service.infoChildren, id: service.id }}
