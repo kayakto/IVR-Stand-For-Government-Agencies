@@ -5,7 +5,7 @@
   --beige-80: #cfa985;
   --grey-80: #565554;
   --grey-40: #abaaa9;
-  --col-gap: 24px; /* Расстояние между элементами */
+  --col-gap: 20px; /* Расстояние между элементами */
 }
 
 .root {
@@ -32,14 +32,14 @@ body {
 
 .container {
   flex-direction: column;
-  height: 95vh;
+  height: 100%;
   max-height: 790px;
   width: 100%;
-  max-width: 1840px;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 1880px;
+  margin: 0 auto;
+  padding: 40px 30px 0;
   align-items: center;
+  gap: 40px;
 }
 
 .title {
