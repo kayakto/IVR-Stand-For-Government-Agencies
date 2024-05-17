@@ -4,31 +4,11 @@ import { useState } from 'react';
 import Post from './components/Post';
 import BackArrowList from './components/BackArrowList';
 import { useLocalObservable } from 'mobx-react-lite';
-import {
-  setStateItem,
-  getStateItem,
-  clearStorage,
-} from './scripts/localstorage';
+import axios from 'axios';
 
 const SimpleList = () => {
   const [offers, setOffers] = useState([]);
-
-  const tempChild1 = [
-    {
-      id: '2',
-      parrent: '1',
-      textSimple: 'Тут мало текста',
-      textRussian: 'Внесение денег на карту фронтендеру на тинькофф',
-      children: ['2', '2'],
-    },
-    {
-      id: '3',
-      parrent: '1',
-      textSimple: 'А тут очень много',
-      textRussian: 'Внесение денег на карту фронтендеру на сбер',
-      children: ['333'],
-    },
-  ];
+  const [title, setTitle] = useState('Услуги')
 
   const servicesHistory = useLocalObservable(() => ({
     history: [],
@@ -42,8 +22,26 @@ const SimpleList = () => {
     },
   }));
 
-  const goDeep = () => {
+  const titleHistory = useLocalObservable(() => ({
+    history: [],
+
+    addToHistory(newState) {
+      this.history.push(newState);
+    },
+
+    getFromHistory() {
+      return this.history.pop();
+    },
+  }));
+  
+  const goDeep = async(post) => {
     servicesHistory.addToHistory(offers);
+    titleHistory.addToHistory(title)
+    const address = post.children.join('&ids=')
+    setTitle(post.textSimple)
+    await axios.get(`http://localhost:8080/api/videoDoc?ids=${address}`)
+    .then(res => res.data).then(data => setOffers(data))
+    .catch(e => console.log(e))
     setOffers(tempChild1);
   };
 
@@ -51,94 +49,32 @@ const SimpleList = () => {
 
   const test = () => {
     if (servicesHistory.history.length > 0) {
-      // alert('yes')
-      const prevState = servicesHistory.getFromHistory();
-      setOffers(prevState);
+      const prevServiceState = servicesHistory.getFromHistory();
+      const prevTitleState = titleHistory.getFromHistory()
+      setOffers(prevServiceState);
+      setTitle(prevTitleState)
     } else {
       navigate(-1);
     }
   };
 
   useEffect(() => {
-    setOffers([
-      {
-        id: '1',
-        parrent: '',
-        textSimple: 'Внесение денег на карту фронтендеру',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2', '3'],
-      },
-      {
-        id: '4',
-        parrent: '',
-        textSimple: 'Внесение денег на карту фронтендеру',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2', '3'],
-      },
-      {
-        id: '5',
-        parrent: '',
-        textSimple: 'Внесение денег на карту фронтендеру',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2', '3'],
-      },
-      {
-        id: '6',
-        parrent: '',
-        textSimple: 'Тут один ребенок',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['3'],
-      },
-      {
-        id: '7',
-        parrent: '',
-        textSimple: 'Тут тоже',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2'],
-      },
-      {
-        id: '8',
-        parrent: '',
-        textSimple: 'Тут тоже',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2'],
-      },
-      {
-        id: '9',
-        parrent: '',
-        textSimple: 'Тут тоже',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2'],
-      },
-      {
-        id: '10',
-        parrent: '',
-        textSimple: 'Тут тоже',
-        textRussian:
-          'Lorem ipsum dolor sit amet. A ultrices ultrices pidoras nisleget.',
-        children: ['2'],
-      },
-    ]);
-  }, []);
+    axios.get('http://localhost:8080/api/videoDoc/main')
+   .then(res => res.data).then(data => setOffers(data))
+   .catch(e => console.log(e))}, []);
+
 
   return (
     <>
       <div className="top-section flex">
         <div className="top-text flex">
           <BackArrowList back={() => test()} />
-          <h2 className="title">Услуги</h2>
+          <h2 className="title">{title}</h2>
           <h2 className="subtitle title">{offers.length} вариантов</h2>
         </div>
         <div className="btn-area flex">
           <button className="btn-reset span-2 btn-beige">Поиск</button>
-          <button className="btn-reset span-2 btn-red">Помощь</button>
+          <button onClick={() => navigate('/choose')} className="btn-reset span-2 btn-brown">Язык</button>
         </div>
       </div>
 
@@ -149,7 +85,7 @@ const SimpleList = () => {
               <div
                 className="service-item flex"
                 key={post.id}
-                onClick={() => goDeep()}
+                onClick={() => goDeep(post)}
               >
                 <Post data={post} childCount={post.children.length} />
               </div>

@@ -9,7 +9,7 @@ const VideoPost = (props) => {
       }}
       className="service-ivr-item flex span-12 "
     >
-       <video className='service-ivr-item-bg' autoplay muted loop>
+       <video className='service-ivr-item-bg' autoPlay muted loop>
         <source src={`${props.data.videoURL}`} type="video/mp4"/>
        </video>
       <div className="service-text">
@@ -26,7 +26,7 @@ const VideoPost = (props) => {
         }}
         className="service-ivr-item flex span-12"
       >
-        <video className='service-ivr-item-bg' autoplay muted loop>
+        <video className='service-ivr-item-bg' autoPlay muted loop>
           <source src={`${props.data.videoURL}`} type="video/mp4"/>
         </video>
         <div className="service-text">
