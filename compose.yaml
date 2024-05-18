@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: "database"
+    ports:
+      - '27017:27017'
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: kayakto19
+      MONGO_INITDB_ROOT_PASSWORD: kayakto20
+    volumes:
+      - db-data:/data/db
+      - ./test-data/:/docker-entrypoint-initdb.d/
+    networks:
+      - main-network
+
+  server:
+    container_name: 'java-spring'
+    build:
+      context: .
+      dockerfile: Dockerfile-java
+    environment:
+      - DATABASE_URL=mongodb://user:pwd@database:27017/assistiveServiseIVR?retryWrites=true&w=majority
+    ports:
+      - 8080:8080
+    networks:
+      - main-network
+
+volumes:
+  db-data:
+    driver: local
+
+networks:
+  main-network:
+    driver: bridge
+
+
+

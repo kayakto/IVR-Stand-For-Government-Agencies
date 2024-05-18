@@ -1,0 +1,8 @@
+FROM gradle:8.4-jdk17
+WORKDIR /app
+COPY src/ src
+COPY build.gradle.kts /app/build.gradle.kts
+COPY settings.gradle.kts /app/settings.gradle.kts
+COPY src/main/resources/application.properties ./
+RUN gradle build
+CMD exec java -jar "build/libs/IVR-Stand-For-Government-Agencies-1.0-SNAPSHOT.jar"
