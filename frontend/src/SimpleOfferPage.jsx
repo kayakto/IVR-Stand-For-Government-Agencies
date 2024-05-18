@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import BackArrowList from './components/BackArrowList';
 import axios from 'axios';
+import InfoItemsList from './components/InfoItemsList';
 
 const SimpleOfferPage = () => {
   const navigate = useNavigate();
@@ -26,20 +27,19 @@ const SimpleOfferPage = () => {
           <h2 className="title mr-auto">{location.state ? location.state.name : ''}</h2>
         </div>
         <div className="service-wrap flex">
-          {service.infoChildren && (
-            <Link
-              to={`/standart-list/${id}/info`}
-              state={{ id: id, infCh: service.infoChildren}}
-            >
-              <button className="btn-reset btn-beige span-3">Подробнее</button>
-            </Link>
-          )}
-          <button className="btn-reset btn-red span-2">Помощь</button>
+          <button onClick={() => navigate('/choose')} className="btn-reset btn-brown span-2">Язык</button>
         </div>
       </div>
 
       <div className="services-info-section flex">
         <p className="services-info-descr span-12">{service.textSimple}</p>
+      
+        {(service.infoChildren && service.infoChildren[0] != "null") && (
+            <div>
+              <h2 className='title'>Подробнее об услуге: </h2>
+            <InfoItemsList/>
+          </div>
+          )}
       </div>
     </>
   );

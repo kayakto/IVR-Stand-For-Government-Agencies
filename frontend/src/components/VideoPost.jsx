@@ -5,27 +5,30 @@ const VideoPost = (props) => {
   return props.childCount > 1 ? (
     <li
       style={{
-        backgroundImage: `url(${props.data.videoURL})`,
-        backgroundSize: 'cover',
+        position: 'relative'
       }}
       className="service-ivr-item flex span-12 "
     >
+       <video className='service-ivr-item-bg' autoPlay muted loop>
+        <source src={`${props.data.videoURL}`} type="video/mp4"/>
+       </video>
       <div className="service-text">
         <h3 className="service-title ivr-list-title">
           {props.data.textSimple}
         </h3>
-        {/* <p className="service-descr ivr-list-descr">{props.data.textRussian}</p> */}
       </div>
     </li>
   ) : (
     <Link to={`/ivr-list/${props.childId}`} state={{ id: props.childId, name: props.data.textSimple }}>
       <li
         style={{
-          backgroundImage: `url(${props.data.videoURL})`,
-          backgroundSize: 'cover',
+          position: 'relative'
         }}
         className="service-ivr-item flex span-12"
       >
+        <video className='service-ivr-item-bg' autoPlay muted loop>
+          <source src={`${props.data.videoURL}`} type="video/mp4"/>
+        </video>
         <div className="service-text">
           <h3 className="service-title ivr-list-title">
             {props.data.textSimple}
