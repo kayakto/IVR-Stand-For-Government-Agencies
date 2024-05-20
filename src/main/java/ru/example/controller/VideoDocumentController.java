@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/videoDoc")
+@RequestMapping("/videoDoc")
 @Tag(name = "Документы", description = "Методы для работы с документами")
 @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "OK")})
 public class VideoDocumentController {
@@ -36,7 +36,7 @@ public class VideoDocumentController {
         return getVideoDocumentsByIds(MainVideoDocumentsIds);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/id/{id}")
     @Operation(summary = "Метод получения одного дочернего документа по идентификатору")
     @ApiResponses(value = { @ApiResponse(responseCode = "204", description = "No Content", content = @Content(mediaType = "application/json"))})
     public ResponseEntity<VideoDocumentDTO> getVideoDocument(
@@ -55,7 +55,7 @@ public class VideoDocumentController {
      * @param ids неопределенное количество идентификаторов, чьи записи нужно найти
      * @return список всех найденных документов в формате DTO
      */
-    @GetMapping
+    @GetMapping("/ids")
     @Operation(summary = "Метод получения нескольких дочерних документов по идентификаторам")
     @ApiResponses(value = { @ApiResponse(responseCode = "204", description = "No Content", content = @Content(mediaType = "application/json"))})
     public ResponseEntity<List<VideoDocumentDTO>> getVideoDocumentsByIds(

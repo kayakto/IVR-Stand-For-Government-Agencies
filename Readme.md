@@ -12,7 +12,7 @@
     docker compose up -d
     ```
 Приложение будет доступно по адресу http://localhost:8080 
-Документация расположена по адресу http://localhost:8080/swagger-ui/index.html#/
+Документация расположена по адресу http://localhost:8080/ivr-hor/swagger-ui/index.html#
 
 Чтобы остановить приложение и удалить контейнеры:
 ```bash

@@ -16,13 +16,16 @@ services:
     networks:
       - main-network
 
-  server:
+  api-java:
     container_name: 'java-spring'
     build:
       context: .
       dockerfile: Dockerfile-java
     environment:
-      - DATABASE_URL=mongodb://user:pwd@database:27017/assistiveServiseIVR?retryWrites=true&w=majority
+      SPRING_DATA_MONGODB_URI: mongodb://user:pwd@database:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
+      BASE_URL: https://pincode-dev.ru/ivr-hor
+      SPRINGDOC_SWAGGER_UI_PATH: /ivr-hor/swagger-ui.html
+      SPRINGDOC_API_DOCS_PATH: /ivr-hor/v3/api-docs
     ports:
       - 8080:8080
     networks:
