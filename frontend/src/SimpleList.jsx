@@ -1,14 +1,16 @@
 import React, { useDeferredValue, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Post from './components/Post';
 import BackArrowList from './components/BackArrowList';
 import { useLocalObservable } from 'mobx-react-lite';
 import axios from 'axios';
+import SimpleSearch from './components/SimpleSearch';
 
 const SimpleList = () => {
   const [offers, setOffers] = useState([]);
   const [title, setTitle] = useState('Услуги')
+
 
   const servicesHistory = useLocalObservable(() => ({
     history: [],
@@ -72,6 +74,7 @@ const SimpleList = () => {
           <h2 className="title">{title}</h2>
           <h2 className="subtitle title">{offers.length} вариантов</h2>
         </div>
+        <SimpleSearch offers={offers} title={title} servicesHistory={servicesHistory} titleHistory={titleHistory} setTitle={setTitle} setOffers={setOffers}/>
         <div className="btn-area flex">
           <button className="btn-reset span-2 btn-beige">Поиск</button>
           <button onClick={() => navigate('/choose')} className="btn-reset span-2 btn-brown">Язык</button>
