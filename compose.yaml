@@ -16,7 +16,7 @@ services:
     networks:
       - main-network
 
-  api-java:
+  api-ivr:
     container_name: 'java-spring'
     build:
       context: .
@@ -24,10 +24,24 @@ services:
     environment:
       SPRING_DATA_MONGODB_URI: mongodb://user:pwd@database:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
       BASE_URL: https://pincode-dev.ru/ivr-hor
-      SPRINGDOC_SWAGGER_UI_PATH: /ivr-hor/swagger-ui.html
-      SPRINGDOC_API_DOCS_PATH: /ivr-hor/v3/api-docs
+      SPRINGDOC_SWAGGER_UI_PATH: /swagger-ui.html
+      SPRINGDOC_API_DOCS_PATH: /v3/api-docs
+      FLASK_API_URL: http://api-flask:5004
+#      SERVER_SERVLET_CONTEXT_PATH: /ivr-hor
     ports:
-      - 8080:8080
+      - "8080:8080"
+    networks:
+      - main-network
+
+  api-flask:
+    container_name: 'flask-api'
+    build:
+      context: .
+      dockerfile: Dockerfile-flask
+    environment:
+      MONGO_URI: mongodb://user:pwd@database:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
+    ports:
+      - "5004:5004"
     networks:
       - main-network
 

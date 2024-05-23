@@ -7,7 +7,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import ru.example.controller.dto.VideoDocumentDTO;
 import ru.example.model.VideoDocument;
@@ -87,15 +88,17 @@ public class VideoDocumentController {
             @PathVariable("text")
             String text) {
         List<VideoDocumentDTO> result = new ArrayList<>();
-        List<VideoDocument> founded = videoDocumentService.findByWords(text);
+        List<String> foundedIds = videoDocumentService.findIdsByWords(text);
 
-        if (founded.isEmpty())
+        if (foundedIds.isEmpty())
             return ResponseEntity.noContent().build();
 
-        for (VideoDocument document: founded) {
-            result.add(document.toVideoDocumentDTO());
+        for (String id : foundedIds){
+            VideoDocument foundedDocument = videoDocumentService.findById(id);
+            result.add(foundedDocument.toVideoDocumentDTO());
         }
 
+//        if (result.isEmpty()) return ResponseEntity.noContent().build();
         return ResponseEntity.ok(result);
     }
 }

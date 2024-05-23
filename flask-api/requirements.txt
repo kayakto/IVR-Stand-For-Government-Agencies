@@ -1,0 +1,5 @@
+flask~=3.0.0
+pymongo
+torch
+transformers
+faiss-cpu

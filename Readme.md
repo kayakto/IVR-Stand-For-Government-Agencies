@@ -18,3 +18,7 @@
 ```bash
 docker-compose down
 ```
+или
+```bash
+docker-compose down --remove-orphans
+```
