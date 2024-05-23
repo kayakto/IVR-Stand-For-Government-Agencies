@@ -43,7 +43,6 @@ const SimpleList = () => {
     await axios.get(`http://localhost:8080/api/videoDoc?ids=${address}`)
     .then(res => res.data).then(data => setOffers(data))
     .catch(e => console.log(e))
-    setOffers(tempChild1);
   };
 
   const navigate = useNavigate();

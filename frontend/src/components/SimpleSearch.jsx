@@ -6,13 +6,22 @@ const SimpleSearch = (props) => {
     const {setOffers, servicesHistory, titleHistory, setTitle, offers, title} = props
     const [searching, setSearching] = useState()
     const search = () => {
+
+        if (!searching) {
+          axios.get('http://localhost:8080/api/videoDoc/main')
+   .then(res => res.data).then(data => setOffers(data))
+   .catch(e => console.log(e))
+        }
         axios.get(`http://localhost:8080/api/videoDoc/search/${searching}`).then(res => res.data)
         .then(data => {
-            servicesHistory.addToHistory(offers)
-            titleHistory.addToHistory(title)
+            // servicesHistory.addToHistory(offers)
+            // titleHistory.addToHistory(title)
             setTitle(searching)
             setOffers(data)
+            
         })
+
+    
 
     }
   return (

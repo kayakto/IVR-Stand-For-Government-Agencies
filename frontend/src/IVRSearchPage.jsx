@@ -118,6 +118,12 @@ const IVRSearchPage = () => {
         return () => clearInterval(intervalID)
     }, [intervalID])
 
+    const search = () => {
+        if (words.length) {
+            const url = words.map((({text}) => (text))).join(' ')
+            navigate('/ivr-list', { state: {url: `http://localhost:8080/api/videoDoc/search/${url}`, title: url}})
+        }
+    }
 
     return (
         <>
@@ -125,6 +131,7 @@ const IVRSearchPage = () => {
                 <div className="top-text flex">
                     <BackArrowList back={() => navigate(-1)} />
                     <h2 className="title">Поиск</h2>
+                    <button onClick={search}>ИСКААААТЬ</button>
                 </div>
             </div>
             <p className=''>Нажмите “Начать”, когда будете готовы показывать жесты</p>

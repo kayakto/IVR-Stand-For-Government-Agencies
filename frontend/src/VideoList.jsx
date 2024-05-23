@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocalObservable } from 'mobx-react-lite';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import BackArrowList from './components/BackArrowList';
 import VideoPost from './components/VideoPost';
 import axios from 'axios';
@@ -8,8 +8,12 @@ import axios from 'axios';
 
 const VideoList = () => {
 
+    const location = useLocation()
+    const url = location.state ? location.state.url : ''
+    
+
     const [serviceList, setServiceList] = useState([])
-    const [title, setTitle] = useState('Услуги')
+    const [title, setTitle] = useState(location.state ? location.state.title : 'Услуги')
 
     const servicesHistory = useLocalObservable(() => ({
         history: [],
@@ -61,8 +65,13 @@ const VideoList = () => {
 
 
     useEffect(() => {
+      if (url) {
+        axios.get(url).then(res => res.data).then(data=> setServiceList(data))
+      } else {
         axios.get('http://localhost:8080/api/videoDoc/main').then(res => res.data).then(data => setServiceList(data))
-        .catch(e => console.log(e))}, [])
+        .catch(e => console.error(e))
+      }}, [])
+        
     
 
     return (

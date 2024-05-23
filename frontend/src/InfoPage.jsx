@@ -1,8 +1,35 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import BackArrowList from './components/BackArrowList'
 
 const InfoPage = () => {
+  const location = useParams()
+  const id = location.infid
+  const navigate = useNavigate()
+
+  const [text, setText] = useState('')
+
+  useEffect(() => {
+    axios.get(`http://localhost:8080/api/videoDoc/${id}`).then(res => res.data)
+    .then(data => setText(data.textSimple))
+  }, [id])
+
   return (
-    <div>InfoPage</div>
+    <>
+    <div className="top-section flex">
+        <div className="top-text flex">
+          <BackArrowList
+            back={() => {
+              navigate(-1);
+            }}
+          />
+          <h2 className="title">Дополнительная информация</h2>
+        </div>
+      </div>
+      <p>{text}</p>
+    </>
+    
   )
 }
 

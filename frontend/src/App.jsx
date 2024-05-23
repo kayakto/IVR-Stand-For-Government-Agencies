@@ -22,6 +22,7 @@ const App = () => {
       <Route path="/ivr-list/:id" element={<IvrServicePage />}></Route>
       <Route path="/ivr-list/:id/info" element={<ExtraInfo />}></Route>
       <Route path="/ivr-list/:id/info/:infid" element={<InfoPage/>}></Route>
+      <Route path="/standart-list/:id/info/:infid" element={<InfoPage/>}></Route>
       <Route path="/ivr-list/search" element={<IVRSearchPage />}></Route>
     </Routes>
   );

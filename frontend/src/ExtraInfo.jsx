@@ -8,12 +8,8 @@ import InfoItemsList from './components/InfoItemsList';
 const ExtraInfo = () => {
   const location = useLocation();
   const id = location.state ? location.state.id : '0';
-  const data = location.state ? location.state.addInfo : []
-  const address = data.join('&ids=')
-  const [info, setInfo] = useState([])
-  useState(() => {
-    axios.get(`http://localhost:8080/api/videoDoc?ids=${address}`).then(res => res.data).then(data => setInfo(data))
-  })
+  const infoChilds = location.state ? location.state.info : []
+
   const navigate = useNavigate();
 
 
@@ -30,7 +26,7 @@ const ExtraInfo = () => {
           <h2 className="title">Дополнительная информация</h2>
         </div>
       </div>
-      <InfoItemsList></InfoItemsList>
+      <InfoItemsList id={id} info={infoChilds}></InfoItemsList>
     </>
   );
 };
