@@ -11,7 +11,7 @@ const InfoPage = () => {
   const [text, setText] = useState('')
 
   useEffect(() => {
-    axios.get(`https://pincode-dev.ru/ivr-hor/api/videoDoc/${id}`).then(res => res.data)
+    axios.get(`https://pincode-dev.ru/ivr-hor/videoDoc/id/${id}`).then(res => res.data)
     .then(data => setText(data.textSimple))
   }, [id])
 

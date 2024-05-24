@@ -12,7 +12,7 @@ const SimpleSearch = (props) => {
    .then(res => res.data).then(data => setOffers(data))
    .catch(e => console.log(e))
         }
-        axios.get(`https://pincode-dev.ru/ivr-hor/api/videoDoc/search/${searching}`).then(res => res.data)
+        axios.get(`https://pincode-dev.ru/ivr-hor/videoDoc/search/${searching}`).then(res => res.data)
         .then(data => {
             // servicesHistory.addToHistory(offers)
             // titleHistory.addToHistory(title)

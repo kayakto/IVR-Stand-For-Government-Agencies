@@ -121,7 +121,7 @@ const IVRSearchPage = () => {
     const search = () => {
         if (words.length) {
             const url = words.map((({text}) => (text))).join(' ')
-            navigate('/ivr-list', { state: {url: `https://pincode-dev.ru/ivr-hor/api/videoDoc/search/${url}`, title: url}})
+            navigate('/ivr-list', { state: {url: `https://pincode-dev.ru/ivr-hor/videoDoc/search/${url}`, title: url}})
         }
     }
 

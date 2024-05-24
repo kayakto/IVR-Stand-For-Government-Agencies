@@ -58,7 +58,7 @@ const VideoList = () => {
       titleHistory.addToHistory(title)
       setTitle(post.textSimple)
       const address = post.children.join('&ids=')
-      await axios.get(`https://pincode-dev.ru/ivr-hor/api/videoDoc?ids=${address}`)
+      axios.get(`https://pincode-dev.ru/ivr-hor/videoDoc/ids?ids=${address}`)
       .then(res => res.data).then(data => setServiceList(data))
       .catch(e => console.log(e))
       }
@@ -68,7 +68,7 @@ const VideoList = () => {
       if (url) {
         axios.get(url).then(res => res.data).then(data=> setServiceList(data))
       } else {
-        axios.get('https://pincode-dev.ru/ivr-hor/api/videoDoc/main').then(res => res.data).then(data => setServiceList(data))
+        axios.get('https://pincode-dev.ru/ivr-hor/videoDoc/main').then(res => res.data).then(data => setServiceList(data))
         .catch(e => console.error(e))
       }}, [])
         
