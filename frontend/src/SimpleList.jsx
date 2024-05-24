@@ -40,7 +40,7 @@ const SimpleList = () => {
     titleHistory.addToHistory(title)
     const address = post.children.join('&ids=')
     setTitle(post.textSimple)
-    await axios.get(`http://localhost:8080/api/videoDoc?ids=${address}`)
+    await axios.get(`https://pincode-dev.ru/ivr-hor/api/videoDoc?ids=${address}`)
     .then(res => res.data).then(data => setOffers(data))
     .catch(e => console.log(e))
   };
@@ -59,7 +59,7 @@ const SimpleList = () => {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/videoDoc/main')
+    axios.get('https://pincode-dev.ru/ivr-hor/api/videoDoc/main')
    .then(res => res.data).then(data => setOffers(data))
    .catch(e => console.log(e))}, []);
 

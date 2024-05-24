@@ -13,11 +13,11 @@ const SimpleOfferPage = () => {
 
   useEffect(() => {
 
-    axios.get(`http://localhost:8080/api/videoDoc/${id.current}`).then(res => res.data)
+    axios.get(`https://pincode-dev.ru/ivr-hor/api/videoDoc/${id.current}`).then(res => res.data)
       .then(data => {
         if (data.infoChildren && data.infoChildren[0] != "null") {
           const infoChildrenURL = data.infoChildren.join("&ids=")
-          axios.get(`http://localhost:8080/api/videoDoc?ids=${infoChildrenURL}`).then(response => response.data)
+          axios.get(`https://pincode-dev.ru/ivr-hor/api/videoDoc?ids=${infoChildrenURL}`).then(response => response.data)
             .then(dataChild => setInfoChild(dataChild))
         }
         setService(data)

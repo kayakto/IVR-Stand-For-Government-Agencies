@@ -8,11 +8,11 @@ const SimpleSearch = (props) => {
     const search = () => {
 
         if (!searching) {
-          axios.get('http://localhost:8080/api/videoDoc/main')
+          axios.get('https://pincode-dev.ru/ivr-hor/api/videoDoc/main')
    .then(res => res.data).then(data => setOffers(data))
    .catch(e => console.log(e))
         }
-        axios.get(`http://localhost:8080/api/videoDoc/search/${searching}`).then(res => res.data)
+        axios.get(`https://pincode-dev.ru/ivr-hor/api/videoDoc/search/${searching}`).then(res => res.data)
         .then(data => {
             // servicesHistory.addToHistory(offers)
             // titleHistory.addToHistory(title)
