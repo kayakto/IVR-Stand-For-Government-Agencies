@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
-import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
+import ru.example.controller.request.VideoDocumentRequest;
 import ru.example.model.VideoDocument;
 import ru.example.model.VideoDocumentRepository;
 
@@ -38,21 +38,15 @@ public class VideoDocumentService {
         headers.setContentType(MediaType.APPLICATION_JSON);
         String requestBody = "{\"dialog\": [\"" + words + "\"]}";
         HttpEntity<String> request = new HttpEntity<>(requestBody, headers);
-        //System.out.println("exchange started");
+        System.out.println("exchange started");
         try {
-            RestTemplate restTemplate = new RestTemplate();
-            SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
-            factory.setConnectTimeout(5000);
-            factory.setReadTimeout(5000);
-            restTemplate.setRequestFactory(factory);
-
             ResponseEntity<List<Map<String, String>>> response = restTemplate.exchange(
                     url,
                     HttpMethod.POST,
                     request,
                     new ParameterizedTypeReference<List<Map<String, String>>>() {}
             );
-            //System.out.println("exchange successfully");
+            System.out.println("exchange successfully");
             List<String> ids = new ArrayList<>();
             if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
                 for (Map<String, String> result : response.getBody()) {
@@ -74,9 +68,56 @@ public class VideoDocumentService {
         return Collections.emptyList();
     }
 
-    public void deleteById(String id) {
-        repository.deleteById(id);
+    public String deleteById(String id) {
+        String url = flaskUrl + "/delete_doc";
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        String requestBody = "{\"id\": \"" + id + "\"}";
+        HttpEntity<String> request = new HttpEntity<>(requestBody, headers);
+
+        ResponseEntity<Map<String, String>> response = restTemplate.exchange(
+                url,
+                HttpMethod.POST,
+                request,
+                new ParameterizedTypeReference<Map<String, String>>() {}
+        );
+
+        if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
+            String deletedId = response.getBody().get("id");
+            repository.deleteById(deletedId);
+            System.out.println("Success");
+            return deletedId;
+        } else {
+            System.out.println("Failure");
+            return null;
+        }
     }
 
-//    public void insertDocument()
+    public String insertDocument(VideoDocument videoDocument){
+        VideoDocument savedDocument = repository.insert(videoDocument);
+        String id = savedDocument.getId();
+        String textSimple = savedDocument.getTextSimple();
+
+        String url = flaskUrl + "/add_doc";
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        String requestBody = "{\"id\": \"" + id + "\", \"text_simple\": \"" + textSimple + "\"}";
+
+        HttpEntity<String> request = new HttpEntity<>(requestBody, headers);
+        ResponseEntity<Map<String, String>> response = restTemplate.exchange(
+                url,
+                HttpMethod.POST,
+                request,
+                new ParameterizedTypeReference<Map<String, String>>() {}
+        );
+
+        if (response.getStatusCode() == HttpStatus.CREATED && response.getBody() != null){
+            System.out.println("Money");
+            return id;
+        }
+        else {
+            System.out.println("no Money");
+            return null;
+        }
+    }
 }

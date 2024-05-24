@@ -7,10 +7,10 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import ru.example.controller.dto.VideoDocumentDTO;
+import ru.example.controller.request.VideoDocumentRequest;
 import ru.example.model.VideoDocument;
 import ru.example.service.VideoDocumentService;
 import java.util.ArrayList;
@@ -98,7 +98,27 @@ public class VideoDocumentController {
             result.add(foundedDocument.toVideoDocumentDTO());
         }
 
-//        if (result.isEmpty()) return ResponseEntity.noContent().build();
+        // if (result.isEmpty()) return ResponseEntity.noContent().build();
         return ResponseEntity.ok(result);
+    }
+
+    @DeleteMapping("/delete/{objectId}")
+    @Operation(summary = "Метод удаления документа по его идентификатору")
+    public ResponseEntity<String> deleteById(
+            @Parameter(description = "Идентификатор записи в базе данных", example = "664f97eec3c04a261d74e2ae")
+            @PathVariable("objectId")
+            String objectId) {
+        String message = videoDocumentService.deleteById(objectId);
+        return ResponseEntity.ok(message);
+    }
+
+    @PostMapping("/add")
+    @Operation(summary = "Метод добавления документа в базу данных")
+    public ResponseEntity<String> addVideoDocument(@RequestBody VideoDocumentRequest request) {
+        VideoDocument videoDocument = request.toVideoDocument();
+        String id = videoDocumentService.insertDocument(videoDocument);
+        if (id != null)
+            return ResponseEntity.ok(id);
+        return ResponseEntity.noContent().build();
     }
 }

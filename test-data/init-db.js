@@ -37,6 +37,15 @@ function transformData(data) {
         return child;
       });
     }
+
+    if (item.info_children && Array.isArray(item.info_children)) {
+      item.info_children = item.info_children.map(child => {
+          if (child.$oid) {
+              return ObjectId(child.$oid);
+          }
+          return child;
+      });
+    }
   });
   return data;
 };

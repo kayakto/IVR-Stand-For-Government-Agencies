@@ -1,16 +1,17 @@
-package ru.example.controller.dto;
+package ru.example.controller.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import ru.example.model.VideoDocument;
 
-@Data
 @AllArgsConstructor
-@Schema(description = "Информация о видео-документе")
-public class VideoDocumentDTO { // maybe record???
-    @Schema(description = "Идентификатор", example = "6612b06653c466832b383aeb")
-    private final String id;
+@Data
+@Getter
+@Schema(description = "Информация о видео-документе, запрашиваемая для добавления")
+public class VideoDocumentRequest {
     @Schema(description = "Текст на простом языке", example = "Внесение изменений в паспорт старого образца/Вписать детей в загранпаспорт")
     private final String textSimple;
     @Schema(description = "Ссылка на видео", example = "https://storage.yandexcloud.net/akhidov-ivr/long.mp4")
@@ -19,8 +20,16 @@ public class VideoDocumentDTO { // maybe record???
     private final String[] children;
     @Schema(description = "Массив с идентификаторами дополнительной информации", example = "null")
     private final String[] infoChildren;
+    @Schema(description = "Флаг, показывающий, можно ли искать данный документ", example = "true")
+    private final boolean isSearchable;
 
-    public VideoDocument toVideoDocument(boolean isSearchable) {
-        return new VideoDocument(id, textSimple, videoURL, children, infoChildren, isSearchable);
+    public VideoDocument toVideoDocument(){
+        return new VideoDocument(
+                this.textSimple,
+                this.videoURL,
+                this.children,
+                this.infoChildren,
+                this.isSearchable
+        );
     }
 }

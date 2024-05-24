@@ -110,7 +110,7 @@ def delete_doc():
 
     # Найти индекс документа в локальных списках
     try:
-        idx = ids.index(str(doc_id))  # Преобразование ObjectId в строку
+        idx = ids.index(doc_id)  # Преобразование ObjectId в строку
     except ValueError:
         return jsonify({"error": "Document not found"}), 404
 
@@ -124,4 +124,4 @@ def delete_doc():
     return jsonify({"id": doc_id, "status": "deleted"}), 200
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5004) #тут я поменял хост
+    app.run('0.0.0.0', port=5005) #тут я поменял хост

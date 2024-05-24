@@ -15,6 +15,7 @@ public class IVRStandExceptionHandler {
     })
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleException(Exception e) {
+        System.out.println(e);
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal server error");
     }
 
