@@ -23,7 +23,7 @@ services:
       dockerfile: Dockerfile-java
     environment:
       SPRING_DATA_MONGODB_URI: mongodb://user:pwd@database_mongoDB:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
-      #BASE_URL: https://pincode-dev.ru/ivr-hor
+      BASE_URL: https://pincode-dev.ru/ivr-hor
       SPRINGDOC_SWAGGER_UI_PATH: /swagger-ui.html
       SPRINGDOC_API_DOCS_PATH: /v3/api-docs
       FLASK_API_URL: http://api-flask-vector:5005
