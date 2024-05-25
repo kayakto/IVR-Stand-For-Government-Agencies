@@ -8,14 +8,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
-import ru.example.controller.request.VideoDocumentRequest;
 import ru.example.model.VideoDocument;
 import ru.example.model.VideoDocumentRepository;
+import ru.example.utill.VideoDocumentUtils;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Component
 public class VideoDocumentService {
@@ -94,8 +91,12 @@ public class VideoDocumentService {
     }
 
     public String insertDocument(VideoDocument videoDocument){
-        VideoDocument savedDocument = repository.insert(videoDocument);
+        VideoDocument documentToInsert = VideoDocumentUtils.createWithoutId(videoDocument);
+        VideoDocument savedDocument = repository.insert(documentToInsert);
         String id = savedDocument.getId();
+        if (!videoDocument.isSearchable()) {
+            return id;
+        }
         String textSimple = savedDocument.getTextSimple();
 
         String url = flaskUrl + "/add_doc";
@@ -118,6 +119,78 @@ public class VideoDocumentService {
         else {
             System.out.println("no Money");
             return null;
+        }
+    }
+
+    public Map<String, String> insertDocuments(List<VideoDocument> remainingDocuments) {
+        Map<String, String> idMap = new HashMap<>();
+//        List<VideoDocument> remainingDocuments = new ArrayList<>(documents);
+
+        for (Iterator<VideoDocument> iterator = remainingDocuments.iterator(); iterator.hasNext(); ){
+            VideoDocument document = iterator.next();
+            if (document.getChildren().length == 0 && document.getInfoChildren().length == 0){
+                String fakeId = document.getId();
+                String realId = insertDocument(document);
+                idMap.put(fakeId, realId);
+                iterator.remove();
+            }
+        }
+
+        boolean documentsInserted;
+        do {
+            documentsInserted = false;
+            for (Iterator<VideoDocument> iterator = remainingDocuments.iterator(); iterator.hasNext(); ) {
+                VideoDocument document = iterator.next();
+                if (allChildrenInMap(document, idMap)) {
+                    updateChildrenIds(document, idMap);
+                    String fakeId = document.getId();
+                    String realId = insertDocument(document);
+                    idMap.put(fakeId, realId);
+                    iterator.remove();
+                    documentsInserted = true;
+                }
+            }
+        } while (documentsInserted && !remainingDocuments.isEmpty());
+
+        if (!remainingDocuments.isEmpty()) {
+            throw new IllegalStateException("Some documents could not be inserted due to missing children references.");
+        }
+
+        return idMap;
+    }
+
+    private boolean allChildrenInMap(VideoDocument document, Map<String, String> idMap) {
+        if (document.getChildren() != null) {
+            for (String child : document.getChildren()) {
+                if (!idMap.containsKey(child)) {
+                    return false;
+                }
+            }
+        }
+        if (document.getInfoChildren() != null) {
+            for (String infoChild : document.getInfoChildren()) {
+                if (!idMap.containsKey(infoChild)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private void updateChildrenIds(VideoDocument document, Map<String, String> idMap) {
+        if (document.getChildren() != null) {
+            List<String> updatedChildren = new ArrayList<>();
+            for (String child : document.getChildren()) {
+                updatedChildren.add(idMap.get(child));
+            }
+            document.setChildren(updatedChildren.toArray(new String[0]));
+        }
+        if (document.getInfoChildren() != null) {
+            List<String> updatedInfoChildren = new ArrayList<>();
+            for (String infoChild : document.getInfoChildren()) {
+                updatedInfoChildren.add(idMap.get(infoChild));
+            }
+            document.setInfoChildren(updatedInfoChildren.toArray(new String[0]));
         }
     }
 }

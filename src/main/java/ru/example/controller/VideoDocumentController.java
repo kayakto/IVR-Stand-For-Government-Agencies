@@ -14,7 +14,9 @@ import ru.example.controller.request.VideoDocumentRequest;
 import ru.example.model.VideoDocument;
 import ru.example.service.VideoDocumentService;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/videoDoc")
@@ -114,11 +116,16 @@ public class VideoDocumentController {
 
     @PostMapping("/add")
     @Operation(summary = "Метод добавления документа в базу данных")
-    public ResponseEntity<String> addVideoDocument(@RequestBody VideoDocumentRequest request) {
-        VideoDocument videoDocument = request.toVideoDocument();
-        String id = videoDocumentService.insertDocument(videoDocument);
-        if (id != null)
-            return ResponseEntity.ok(id);
+    public ResponseEntity<Map<String, String>> addVideoDocument(@RequestBody VideoDocumentRequest[] requestedDocuments) {
+        List<VideoDocument> documentsToInsert = new ArrayList<VideoDocument>();
+        for (VideoDocumentRequest requestedDoc : requestedDocuments) {
+            VideoDocument videoDocument = requestedDoc.toVideoDocument();
+            documentsToInsert.add(videoDocument);
+        }
+
+        Map<String, String> idMap = videoDocumentService.insertDocuments(documentsToInsert); // Todo hashmap or map or dictionary
+        if (!idMap.isEmpty())
+            return ResponseEntity.ok(idMap);
         return ResponseEntity.noContent().build();
     }
 }

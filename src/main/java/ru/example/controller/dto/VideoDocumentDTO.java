@@ -19,8 +19,10 @@ public class VideoDocumentDTO { // maybe record???
     private final String[] children;
     @Schema(description = "Массив с идентификаторами дополнительной информации", example = "null")
     private final String[] infoChildren;
+    @Schema(description = "Ссылка на иконку", example = "https://storage.yandexcloud.net/akhidov-ivr/icon5.png")
+    private final String iconUrl;
 
     public VideoDocument toVideoDocument(boolean isSearchable) {
-        return new VideoDocument(id, textSimple, videoURL, children, infoChildren, isSearchable);
+        return new VideoDocument(id, textSimple, videoURL, children, infoChildren, isSearchable, iconUrl);
     }
 }

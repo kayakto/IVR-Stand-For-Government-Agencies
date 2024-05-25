@@ -16,7 +16,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -33,24 +34,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
-},
-{
-  "_id": {
-    "$oid": "6612b06253c466832b383aea"
-  },
-  "text_simple": "Старого образца",
-  "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
-  "children": [
-    {
-      "$oid": "6612b29553c466832b383aee"
-    },
-    {
-      "$oid": "6612b29c53c466832b383aef"
-    }
-  ],
-  "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -64,7 +49,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -74,7 +60,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -91,7 +78,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -105,7 +93,8 @@
       "$oid": "66141f3c6df3a0792d1c2fea"
     }
   ],
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -119,7 +108,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -133,7 +123,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -147,7 +138,8 @@
       "$oid": "66141f3c6df3a0792d1c2fea"
     }
   ],
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -161,7 +153,8 @@
       "$oid": "66141f3c6df3a0792d1c2fea"
     }
   ],
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -178,7 +171,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -192,7 +186,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -202,7 +197,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -216,7 +212,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -230,7 +227,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -240,7 +238,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -257,7 +256,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -271,7 +271,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -297,7 +298,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -311,7 +313,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -325,7 +328,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -342,7 +346,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -356,7 +361,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -370,7 +376,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -380,7 +387,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -390,7 +398,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -404,7 +413,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -418,7 +428,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -432,7 +443,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -446,7 +458,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -460,7 +473,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -480,7 +494,8 @@
       "$oid": "6634f3f30835debff5b7347f"
     }
   ],
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -500,7 +515,8 @@
       "$oid": "661810a46182526904884fca"
     }
   ],
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -517,7 +533,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -531,7 +548,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -545,7 +563,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -555,7 +574,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -565,7 +585,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -588,7 +609,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -602,7 +624,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -612,7 +635,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -626,7 +650,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -636,7 +661,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -650,7 +676,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -660,7 +687,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -674,7 +702,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -684,7 +713,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -698,7 +728,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -712,7 +743,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -729,7 +761,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -743,7 +776,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -753,7 +787,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -776,7 +811,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -790,7 +826,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -800,7 +837,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -814,7 +852,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -824,21 +863,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
-},
-{
-  "_id": {
-    "$oid": "661ff57561a7adbdc4a02369"
-  },
-  "text_simple": "Срок предоставления",
-  "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
-  "children": [
-    {
-      "$oid": "661ff9ad61a7adbdc4a0236f"
-    }
-  ],
-  "info_children": null,
-  "is_searchable": true
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -848,7 +874,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -862,7 +889,8 @@
     }
   ],
   "info_children": null,
-  "is_searchable": true
+  "is_searchable": true,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -872,7 +900,8 @@
   "video_url": "https://storage.yandexcloud.net/akhidov-ivr/long.mp4",
   "children": [],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 },
 {
   "_id": {
@@ -886,5 +915,6 @@
     }
   ],
   "info_children": null,
-  "is_searchable": false
+  "is_searchable": false,
+  "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.png"
 }]

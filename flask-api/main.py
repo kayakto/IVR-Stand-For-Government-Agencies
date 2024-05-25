@@ -36,7 +36,7 @@ documents = []
 ids = []
 for doc in collection.find({"is_searchable": True}):
     documents.append(doc["text_simple"])
-    ids.append(doc["_id"])
+    ids.append(str(doc["_id"]))
 
 if not documents:
     raise ValueError("No documents to embed")
@@ -91,6 +91,7 @@ def add_doc():
     # Обновление локальных списков
     documents.append(text_simple)
     ids.append(str(doc_id))
+    print(ids)
 
     return jsonify({"id": str(doc_id), "text": text_simple}), 201
 
@@ -103,12 +104,7 @@ def delete_doc():
     if not doc_id:
         return jsonify({"error": "No id provided"}), 400
 
-    # Удаление документа из MongoDB
-    # result = collection.delete_one({"_id": pymongo.ObjectId(doc_id)})
-    # if result.deleted_count == 0:
-    #     return jsonify({"error": "Document not found"}), 404
 
-    # Найти индекс документа в локальных списках
     try:
         idx = ids.index(doc_id)  # Преобразование ObjectId в строку
     except ValueError:

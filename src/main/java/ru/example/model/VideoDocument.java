@@ -2,6 +2,7 @@ package ru.example.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,19 +20,26 @@ public class VideoDocument {
     @Field("video_url")
     private final String videoURL;
     @Field("children")
-    private final String[] children;
+    @Setter
+    private String[] children;
     @Field("info_children")
-    private final String[] infoChildren;
+    @Setter
+    private String[] infoChildren;
     @Field("is_searchable")
     private final boolean isSearchable;
+    @Field("icon_url")
+    private final String iconUrl;
 
     @PersistenceConstructor
-    public VideoDocument(String textSimple, String videoURL, String[] children, String[] infoChildren, boolean isSearchable) {
+    public VideoDocument(String textSimple, String videoURL,
+                         String[] children, String[] infoChildren,
+                         boolean isSearchable, String iconUrl) {
         this.textSimple = textSimple;
         this.videoURL = videoURL;
         this.children = children;
         this.infoChildren = infoChildren;
         this.isSearchable = isSearchable;
+        this.iconUrl = iconUrl;
     }
 
 
@@ -47,6 +55,6 @@ public class VideoDocument {
 //    }
 
     public VideoDocumentDTO toVideoDocumentDTO() {
-        return new VideoDocumentDTO(id, textSimple, videoURL, children, infoChildren);
+        return new VideoDocumentDTO(id, textSimple, videoURL, children, infoChildren, iconUrl);
     }
 }
