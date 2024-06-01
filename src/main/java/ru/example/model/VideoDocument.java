@@ -10,6 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import ru.example.controller.dto.VideoDocumentDTO;
 
 @Getter
+@Setter
 @Document(collection = "videos")
 @AllArgsConstructor
 public class VideoDocument {
@@ -20,41 +21,32 @@ public class VideoDocument {
     @Field("video_url")
     private final String videoURL;
     @Field("children")
-    @Setter
     private String[] children;
     @Field("info_children")
-    @Setter
     private String[] infoChildren;
     @Field("is_searchable")
-    private final boolean isSearchable;
+    private final Boolean isSearchable;
     @Field("icon_url")
-    private final String iconUrl;
+    private final String iconURL;
 
     @PersistenceConstructor
     public VideoDocument(String textSimple, String videoURL,
                          String[] children, String[] infoChildren,
-                         boolean isSearchable, String iconUrl) {
+                         Boolean isSearchable, String iconURL) {
         this.textSimple = textSimple;
         this.videoURL = videoURL;
         this.children = children;
         this.infoChildren = infoChildren;
         this.isSearchable = isSearchable;
-        this.iconUrl = iconUrl;
+        this.iconURL = iconURL;
     }
 
-
-//    public VideoDocument(String id, String textSimple,
-//                         String videoURL, String[] children,
-//                         String[] infoChildren, boolean isSearchable) {
-//        this.id = id;
-//        this.textSimple = textSimple;
-//        this.videoURL = videoURL;
-//        this.children = children;
-//        this.infoChildren = infoChildren;
-//        this.isSearchable = isSearchable;
-//    }
-
     public VideoDocumentDTO toVideoDocumentDTO() {
-        return new VideoDocumentDTO(id, textSimple, videoURL, children, infoChildren, iconUrl);
+        return new VideoDocumentDTO(id,
+                textSimple,
+                videoURL,
+                children,
+                infoChildren,
+                iconURL);
     }
 }

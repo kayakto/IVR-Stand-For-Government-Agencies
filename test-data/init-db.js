@@ -51,7 +51,7 @@ function transformData(data) {
 };
 const collection = db.getCollection("videos");
 const fs = require('fs');
-const scriptContent = fs.readFileSync('/docker-entrypoint-initdb.d/test/assistiveServiseIVR.videos.json', 'utf8');
+const scriptContent = fs.readFileSync('/docker-entrypoint-initdb.d/test/database.json', 'utf8');
 const data = JSON.parse(scriptContent);
 const transformedData = transformData(data);
 collection.insertMany(transformedData);

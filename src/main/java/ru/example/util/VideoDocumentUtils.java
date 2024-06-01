@@ -1,8 +1,6 @@
-package ru.example.utill;
+package ru.example.util;
 
 import ru.example.model.VideoDocument;
-
-import java.util.Map;
 
 public class VideoDocumentUtils {
     public static VideoDocument createWithoutId(VideoDocument videoDocument) {
@@ -11,8 +9,8 @@ public class VideoDocumentUtils {
                 videoDocument.getVideoURL(),
                 videoDocument.getChildren(),
                 videoDocument.getInfoChildren(),
-                videoDocument.isSearchable(),
-                videoDocument.getIconUrl()
+                videoDocument.getIsSearchable(),
+                videoDocument.getIconURL()
         );
     }
 }

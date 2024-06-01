@@ -1,0 +1,1249 @@
+[{
+    "_id": {
+      "$oid": "6659c4943caa308eaf3f45f9"
+    },
+    "text_simple": "Консультация по услугам",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/1.mp4",
+    "children": [
+      {
+        "$oid": "6659c55ebbc8ff905fd7e61a"
+      },
+      {
+        "$oid": "6659d57e67313ea32ccbef4a"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": ""
+  },
+
+  {
+    "_id": {
+      "$oid": "6659c55ebbc8ff905fd7e61a"
+    },
+    "text_simple": "Консультация по регистрационному учету",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/2.mp4",
+    "children": [
+      {
+        "$oid": "6659c606d6debe3ec2946683"
+      },
+      {
+        "$oid": "6659c70c4bba911fc1ae5fce"
+      },
+      {
+        "$oid": "6659c75d7bc437f3b63c607b"
+      },
+      {
+        "$oid": "6659c7c6bbb2ea0f591d40fa"
+      },
+      {
+        "$oid": "6659c9a65c0037b9dee39f32"
+      },
+      {
+        "$oid": "6659c9fc1f352cde55634d86"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon2.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659c606d6debe3ec2946683"
+    },
+    "text_simple": "Постоянная регистрация ребенка до 14 лет",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/3.mp4",
+    "children": [
+      {
+        "$oid": "6659caf1ddbd4fa392965fcb"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659caf1ddbd4fa392965fcb"
+    },
+    "text_simple": "- Для оформления регистрации по месту жительства ребенка до 14 лет вам потребуется",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/9.1.mp4",
+    "children": [
+      {
+        "$oid": "6659d0c66b57938e444e4004"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659c70c4bba911fc1ae5fce"
+    },
+    "text_simple": "Временная регистрация ребенка до 14 лет",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/4.mp4",
+    "children": [
+      {
+        "$oid": "6659d0eb558d581d135dbf64"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon4.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d0eb558d581d135dbf64"
+    },
+    "text_simple": "- Для оформления регистрации по месту пребывания ребенка до 14 лет вам потребуется",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/10.1.mp4",
+    "children": [
+      {
+        "$oid": "6659d0c66b57938e444e4004"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d0c66b57938e444e4004"
+    },
+    "text_simple": "- заявление от законных представителей(родителей,усыновителей, опекунов,попечителей);",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/15.1.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b26a9be980542eae0b2fb"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/15.1.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b26a9be980542eae0b2fb"
+    },
+    "text_simple": "- документы, удостоверяющие личностьзаконных представителей (родителей,усыновителей, опекунов, попечителей),или документы, подтверждающие установление опеки;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/15.2.mp4",
+    "children": [
+      {
+        "$oid": "665b2722f17c1a0c992e6dbd"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/15.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b2722f17c1a0c992e6dbd"
+    },
+    "text_simple": "- свидетельство о рождении ребенка,не достигшего 14 лет;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/15.3.mp4",
+    "children": [
+      {
+        "$oid": "665b276b69cf96f41b996c21"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/15.3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b276b69cf96f41b996c21"
+    },
+    "text_simple": "- акт органа опеки и попечительства о назначении опеки (при необходимости);",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/15.4.mp4",
+    "children": [
+      {
+        "$oid": "665b27bfabb37f655f3cd484"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/15.4.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b27bfabb37f655f3cd484"
+    },
+    "text_simple": "- согласие законного представителя (родителя,Усыновителя, опекуна, попечителя), либо подтверждающие обстоятельства, при которых согласие не может быть предоставлено.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/15.5.mp4",
+    "children": [
+      {
+        "$oid": "665b282860d42d9e5ee92bf2"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/15.5.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b282860d42d9e5ee92bf2"
+    },
+    "text_simple": "Согласие от собственников жилого помещения не требуется.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/15.6.mp4",
+    "children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/15.6.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659c75d7bc437f3b63c607b"
+    },
+    "text_simple": "Постоянная регистрация Ребенок после 14 лет",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/5.mp4",
+    "children": [
+      {
+        "$oid": "6659cd3b888de37cc538c467"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon5.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659cd3b888de37cc538c467"
+    },
+    "text_simple": "- Для оформления регистрации по месту проживания несовершеннолетнего лица с 14 до 18 лет необходимо предоставить:",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/11.1.mp4",
+    "children": [
+      {
+        "$oid": "6659cfddcad64ac69a381ebc"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/5.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659c7c6bbb2ea0f591d40fa"
+    },
+    "text_simple": "Временная регистрация Ребенок после 14 лет",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/6.mp4",
+    "children": [
+      {
+        "$oid": "6659cd67451edb9bf53a17f2"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon6.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659cd67451edb9bf53a17f2"
+    },
+    "text_simple": "- Для оформления регистрации по месту пребываниянесовершеннолетнеголица с 14 до 18 лет необходимопредоставить:",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/12.1.mp4",
+    "children": [
+      {
+        "$oid": "6659cfddcad64ac69a381ebc"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/6.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659cfddcad64ac69a381ebc"
+    },
+    "text_simple": "- документ, удостоверяющийличность несовершеннолетнего;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.1.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b2b0ae04d7c47bf2d53f5"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/16.1.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b2b0ae04d7c47bf2d53f5"
+    },
+    "text_simple": "- документ, удостоверяющий личность законных представителей и документ устанавливающий родство с несовершеннолетним;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.2.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b2b59c63ed1a1eb11e726"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/16.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b2b59c63ed1a1eb11e726"
+    },
+    "text_simple": "- письменное согласие собственникажилого помещения,всех участников долевой собственности (при необходимости);",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.3.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b2bd09d30924ab79600c2"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/16.3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b2bd09d30924ab79600c2"
+    },
+    "text_simple": "- при назначении опекуна или попечителя- акт органа опеки и попечительства.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.4.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b2c17f9ca9159b3b75f54"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/16.4.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b2c17f9ca9159b3b75f54"
+    },
+    "text_simple": "При обращении в МФЦ, должныприсутствоватьвсе собственники жилого помещениястарше четырнадцати лет с документомудостоверяющим личность,представители несовершеннолетних собственников помещения, с документами удостоверяющими личность и свидетельствомо рождении несовершеннолетнего.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.5.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b2c6db78d24e8a2fa2489"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/16.5.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b2c6db78d24e8a2fa2489"
+    },
+    "text_simple": "При обращении в МФЦ должны присутствовать законные представители ребенка до 18 лет.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.6.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b2c9f3a87896db706c828"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/16.6.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b2c9f3a87896db706c828"
+    },
+    "text_simple": "По своему усмотрению вы вправепредставить документ, подтверждающий право пользования жилым помещением (например, выписку из ЕГРН, Или свидетельство о государственнойрегистрации права).",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.7.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/16.7.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659c9a65c0037b9dee39f32"
+    },
+    "text_simple": "Постоянная регистрация Совершеннолетний",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/7.mp4",
+    "children": [
+      {
+        "$oid": "6659cd8c5850b4761e5dfdf4"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon7.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659cd8c5850b4761e5dfdf4"
+    },
+    "text_simple": "Для оформления регистрации по месту жительствавам потребуется:",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/13.1.mp4",
+    "children": [
+      {
+        "$oid": "6659d06ad282e075ea3fea48"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/7.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659c9fc1f352cde55634d86"
+    },
+    "text_simple": "Временная регистрация Совершеннолетний",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/8.mp4",
+    "children": [
+      {
+        "$oid": "6659ce05d3d06d6ec34ee3f7"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon8.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659ce05d3d06d6ec34ee3f7"
+    },
+    "text_simple": "Для оформления регистрации по месту пребываниявам потребуется:",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/14.1.mp4",
+    "children": [
+      {
+        "$oid": "6659d06ad282e075ea3fea48"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/8.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d06ad282e075ea3fea48"
+    },
+    "text_simple": "- документ, удостоверяющий личностьЗаявителя;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/17.1.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b2e3d2ed875d389940105"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon17.1.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b2e3d2ed875d389940105"
+    },
+    "text_simple": "- письменное согласие собственника, всех участников долевой собственности (при необходимости).",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/13full.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b3837ac0b7e2ab2512f81"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon20.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b3837ac0b7e2ab2512f81"
+    },
+    "text_simple": "При обращении в МФЦ должны присутствовать все собственники жилого Помещения старше 14 лет с документом удостоверяющим личность, представители несовершеннолетних Собственников помещения, с документами удостоверяющими личность и свидетельством о рождении несовершеннолетнего.По своему усмотрению вы вправе представить документ-основание, подтверждающий Право пользования жилым помещением (например, выписку из ЕГРН, Или свидетельство о государственной регистрации права).",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.5.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b387417c3982e876d9644"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon16.5.svg"
+  },
+  
+  {
+    "_id": {
+      "$oid": "665b387417c3982e876d9644"
+    },
+    "text_simple": "По своему усмотрению вы вправе представить документ-основание, подтверждающий Право пользования жилым помещением (например, выписку из ЕГРН, Или свидетельство о государственной регистрации права).",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/16.7.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon16.7.svg"
+  },
+
+
+  {
+    "_id": {
+      "$oid": "6659d1582d76ca720b80c1fe"
+    },
+    "text_simple": "Дополнительная информация",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/18.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d3634148ea39a690a813"
+      },
+      {
+        "$oid": "6659d9d793b975acf5bb3f0d"
+      },
+      {
+        "$oid": "6659da700f580edbb8827aeb"
+      },
+      {
+        "$oid": "6659db1b620c06543b0482bc"
+      },
+      {
+        "$oid": "6659db8cf32a93a3ce1c812f"
+      },
+      {
+        "$oid": "6659dc04fd5050af39ccd87a"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon18.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d3634148ea39a690a813"
+    },
+    "text_simple": "Госпошлина не предусмотрена.Срок предоставления государственной услугиисчисляется со дня приема территориальным органом МВД заявления документов, необходимых для предоставления государственной услуги и составляет:* при предоставлении правоустанавливающегодокумента - 1 раб.день,* при непредъявлении правоустанавливающего документа - 6 рабочих дней.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/19.mp4",
+    "children": null,
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon19.svg"
+  },
+
+
+  {
+    "_id": {
+      "$oid": "6659d57e67313ea32ccbef4a"
+    },
+    "text_simple": "Консультация по паспорту РФ",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/20.mp4",
+    "children": [
+      {
+        "$oid": "6659d6146b1646e3d79fc9f2"
+      },
+      {
+        "$oid": "6659d643039023acf1059717"
+      },
+      {
+        "$oid": "6659d66aa55f82bafec5f77b"
+      },
+      {
+        "$oid": "6659d6908dfd473ea82d77b1"
+      },
+      {
+        "$oid": "6659d6c074774715bfbd6976"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon20.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659d6146b1646e3d79fc9f2"
+    },
+    "text_simple": "Достижение 14 лет",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/21.mp4",
+    "children": [
+      {
+        "$oid": "6659d75f49faa34b961fb4c1"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon21.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d75f49faa34b961fb4c1"
+    },
+    "text_simple": "Подать заявление на оформление паспорта подостижению 14 лет можно на следующий день после наступления события.Для этого Вам потребуется:",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.1.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b396fea1f56f0fd6a2868"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.1.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b396fea1f56f0fd6a2868"
+    },
+    "text_simple": "- 2 личные фотографии 3,5 на 4,5 см матовые на белом фоне в цветном или чёрно-беломисполнении",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.2.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b39f6b777baa854257398"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b39f6b777baa854257398"
+    },
+    "text_simple": "- Свидетельство о рождении заявителя;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.3.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b3a0356a25dd11a8ad923"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b3a0356a25dd11a8ad923"
+    },
+    "text_simple": "- Документ подтверждающий наличие гражданства РФ;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.4.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b3a0356a25dd11a8ad923"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.4.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b3a0356a25dd11a8ad923"
+    },
+    "text_simple": "- Документ, подтверждающий регистрацию по месту жительства несовершеннолетнего при наличии",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.5.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b3aaf6125332199416398"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.5.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b3aaf6125332199416398"
+    },
+    "text_simple": "- Госпошлина 300 р, оплачивается в МФЦНесовершеннолетний гражданин приходит лично",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.6.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.6.svg"
+  },
+  
+  {
+    "_id": {
+      "$oid": "6659d643039023acf1059717"
+    },
+    "text_simple": "Достижение 20 лет/Достижение 45 лет",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/22.mp4",
+    "children": [
+      {
+        "$oid": "6659d7e53e980cbfb95dcd54"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon22.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d7e53e980cbfb95dcd54"
+    },
+    "text_simple": "Подать заявление на замену паспорта в связи с достижением 20 лет/45 лет можно на следующий день, после наступления события.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.1.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b3c85ed647e57aae98c08"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.1.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b3c85ed647e57aae98c08"
+    },
+    "text_simple": "Для замены паспорта гражданина РФ по возрасту (достижение 20 или 45 лет) вам потребуется предоставить:",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.2.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b41c666ce80e981064a19"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b41c666ce80e981064a19"
+    },
+    "text_simple": "-Паспорт Российской Федерации, подлежащий замене;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.3.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b42495b114a9893bce922"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b42495b114a9893bce922"
+    },
+    "text_simple": "-Документы, необходимые для проставления обязательных отметок в паспорте (при наличии);",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.4.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b4276b598761309935626"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.4.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b4276b598761309935626"
+    },
+    "text_simple": "-Документы воинского учета (при наличии факта постановки на воинский учет);",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.5.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b42dc48d4afd2db49a5b5"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.5.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b42dc48d4afd2db49a5b5"
+    },
+    "text_simple": "-2 личные фотографии 3,5 на 4,5см матовые набелом фоне в цветном или чёрно-белом исполнении",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.2.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b434bf59d40a5c7834299"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b434bf59d40a5c7834299"
+    },
+    "text_simple": "(при необходимости оформлениявременного удостоверения личности предоставляется дополнительно фото).",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.6.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.6.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b434bf59d40a5c7834299"
+    },
+    "text_simple": "Заявители, изъявившие желание о внесении впаспорт отметок, вносимых по желанию гражданина, предоставляют заявление идокументы, необходимые для проставления таких отметок",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.7.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.7.svg"
+  },
+
+
+  {
+    "_id": {
+      "$oid": "6659d66aa55f82bafec5f77b"
+    },
+    "text_simple": "Изменились персональные данные",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/23.mp4",
+    "children": [
+      {
+        "$oid": "6659d82b60e4d36b60776776"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon23.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d82b60e4d36b60776776"
+    },
+    "text_simple": "Подать заявления на замену паспорта в связи со сменой персональных данных можно на следующий день, после наступления события.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/28.1.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b44faf7057f7222981b12"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon28.1.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b44faf7057f7222981b12"
+    },
+    "text_simple": "Для замены паспорта гражданина Российской Федерации в связи со сменой персональных данных, вам потребуется:- 2 личные фотографии 3,5 на 4,5 см матовые на белом фоне в цветном или черно-белом исполнении- (при необходимости оформления временного удостоверения личности предоставляется дополнительно фото)- Паспорт Российской Федерации подлежащий замене - подтверждающий документ, на основании чего произошла смена персональных данных: свидетельство о заключении брака, выданное компетентным органом иностранного государства или документ компетентного органа иностранного государства, подтверждающий принятие фамилии супругаСвидетельство о расторжении брака, выданное компетентным органом иностранного государства или документ компетентного органа иностранного государства, подтверждающий изменение фамилии после расторжения брака (в случае регистрации указанных актов гражданского состояния компетентным органом иностранного государства)Свидетельство об усыновлении и оформленное новое свидетельство о рождении, выданные органом ЗАГС или консульскими учреждениями Российской Федерации.),- Свидетельство о рождении детей до 14 лет, - Госпошлина 300р , оплачивается в МФЦ",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/28.2.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b4524bc0dcbf19c6c8fce"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon28.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b4524bc0dcbf19c6c8fce"
+    },
+    "text_simple": "- 2 личные фотографии 3,5 на 4,5 см матовые на белом фоне в цветном или черно-белом исполнении",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.2.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b45bcb4b1612b0080fe80"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b45bcb4b1612b0080fe80"
+    },
+    "text_simple": "-(при необходимости оформления временного удостоверения личности предоставляется дополнительно фото)",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.6.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b46121d497d6c7c355864"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.6.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b46121d497d6c7c355864"
+    },
+    "text_simple": "- Паспорт Российской Федерации подлежащий замене - подтверждающий документ, на основании чего произошла смена персональных данных: свидетельство о заключении брака, выданное компетентным органом иностранного государства или документ компетентного органа иностранного государства, подтверждающий принятие фамилии супругаСвидетельство о расторжении брака, выданное компетентным органом иностранного государства или документ компетентного органа иностранного государства, подтверждающий изменение фамилии после расторжения брака (в случае регистрации указанных актов гражданского состояния компетентным органом иностранного государства)Свидетельство об усыновлении и оформленное новое свидетельство о рождении, выданные органом ЗАГС или консульскими учреждениями Российской Федерации.),- Свидетельство о рождении детей до 14 лет,",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/28.3.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b4664c66acf4ca00e010d"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon28.3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b4664c66acf4ca00e010d"
+    },
+    "text_simple": " - Госпошлина 300р , оплачивается в МФЦ",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/28.4.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon28.4.svg"
+  },
+
+
+  {
+    "_id": {
+      "$oid": "6659d6908dfd473ea82d77b1"
+    },
+    "text_simple": "Непригодность паспорта",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/24.mp4",
+    "children": [
+      {
+        "$oid": "6659d8d2f3d28e730e4c1e67"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon24.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d8d2f3d28e730e4c1e67"
+    },
+    "text_simple": "Для замены паспорта гражданина РФ в связи с непригодностью к использованию, вам потребуется:",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/29.1.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b47403cc583b5f8e1cc1d"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon29.1.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b47403cc583b5f8e1cc1d"
+    },
+    "text_simple": "Паспорт Российской Федерации, подлежащий замене;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.3.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b47a0425d237eb9c82684"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.3.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b47a0425d237eb9c82684"
+    },
+    "text_simple": "Документы, необходимые для проставления обязательных отметок в паспорте (при наличии);",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.4.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b47dc4f1ec060c81c267f"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.4.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b47dc4f1ec060c81c267f"
+    },
+    "text_simple": "2 личные фотографии 3,5 на 4,5см матовые на белом фоне в цветном или чёрно-белом исполнении,",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/26.2.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b48922632accf5cbfee69"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon26.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b48922632accf5cbfee69"
+    },
+    "text_simple": "при необходимости оформления временного удостоверения личности предоставляется дополнительно фото.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.6.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b48cb36c13573dcff3469"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.6.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b48cb36c13573dcff3469"
+    },
+    "text_simple": "Государственная пошлина 1500 рублей, можно оплатить в отделении МФЦ.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/29.2.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b4903ed5d2c71970b8073"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon29.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b4903ed5d2c71970b8073"
+    },
+    "text_simple": " Заявители, изъявившие желание о внесении в паспорт отметок, вносимых по желанию гражданина, предоставляют заявление и документы, необходимые для проставления таких отметок (документы о заключении брака, либо о расторжении брака,",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/27.7.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b496b937fb3af3453093d"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon27.7.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b496b937fb3af3453093d"
+    },
+    "text_simple": "Свидетельство о рождении детей - граждан Российской Федерации, не достигших 14 лет),",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/29.3.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "665b49a8f8a8fde6b92bbde2"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon29.4.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b49a8f8a8fde6b92bbde2"
+    },
+    "text_simple": "Действующий заграничный паспорт, документы воинского учета.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/29.4.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon29.3.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659d6c074774715bfbd6976"
+    },
+    "text_simple": "Паспорт украден/утерян",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/25.mp4",
+    "children": [
+      {
+        "$oid": "6659d910e53ccb85f993b12f"
+      }
+    ],
+    "info_children": null,
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon25.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d910e53ccb85f993b12f"
+    },
+    "text_simple": "Для подачи документов рекомендуем вам обратиться в уполномоченное подразделение Управления по вопросам миграции ГУ МВД России по вашему региону",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/30full.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d1582d76ca720b80c1fe"
+      }
+    ],
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon30.1.svg"
+  },
+  
+  {
+    "_id": {
+      "$oid": "6659d9d793b975acf5bb3f0d"
+    },
+    "text_simple": "Госпошлина",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/31.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659d9d793b975acf5bb3f0d"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon31.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659d9d793b975acf5bb3f0d"
+    },
+    "text_simple": "За предоставление государственной услуги взимается государственная пошлина в размерах:",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/35.1.mp4",
+    "children": null,
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon35.1.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b4a0321dfc783af83dfd7"
+    },
+    "text_simple": "- За выдачу паспорта гражданина Российской Федерации, замена по достижению возраста 20/45 лет, смену персональных данных, изменения внешности/пола - 300 рублей;- За выдачу паспорта гражданина Российской Федерации взамен утраченного или пришедшего в негодность - 1 500 рублей;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/35.2.mp4",
+    "children": null,
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon35.2.svg"
+  },
+  {
+    "_id": {
+      "$oid": "665b4a790ebd86a619ba0797"
+    },
+    "text_simple": "- За выдачу паспорта гражданина Российской Федерации взамен утраченного или пришедшего в негодность - 1 500 рублей;",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/35.3.mp4",
+    "children": null,
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon35.3.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659da700f580edbb8827aeb"
+    },
+    "text_simple": "Документы удостоверяющие наличие гражданства РФ",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/32.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659dadf0d4f759266525746"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon32.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659dadf0d4f759266525746"
+    },
+    "text_simple": "а) свидетельство о рождении, с отметкой о гражданстве РФ, проставленного на свидетельстве о рождении несовершеннолетнего;б) паспорт гражданина Российской Федерации, в том числе удостоверяющий личность гражданина Российской Федерации за пределами территории Российской Федерации;в) дипломатический паспорт;г) служебный паспорт;д) свидетельство о приобретении гражданства Российской Федерации по рождению, выданное органом, ведающим делами о гражданстве Российской Федерации;е) свидетельство о рождении с отметкой, подтверждающей наличие гражданства Российской Федерации, проставленной должностным лицом органа, ведающего делами о гражданстве Российской Федерации, и печатью этого органа;ж) документ, выданный полномочным органом иностранного государства (с переводом на русский язык), с отметкой, подтверждающей наличие гражданства Российской Федерации, проставленной должностным лицом органа, ведающего делами о гражданстве Российской Федерации, и печатью этого органа.Документами, указанными в подпунктах б - г, может также подтверждаться наличие гражданства Российской Федерации у детей, сведения о которых внесены в эти документы и заверены подписью должностного лица и печатью органа, ведающего делами о гражданстве Российской Федерации.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/36.mp4",
+    "children": null,
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon32.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659db1b620c06543b0482bc"
+    },
+    "text_simple": "Срок предоставления услуги",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/33.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659db6745c2a07a20831feb"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon33.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659db6745c2a07a20831feb"
+    },
+    "text_simple": "Срок оформления паспорта не более 5 рабочих дней",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/37.mp4",
+    "children": null,
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon33.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659db8cf32a93a3ce1c812f"
+    },
+    "text_simple": "Фотографии",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/34.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659dbba1601260047bfadd6"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon34.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659dbba1601260047bfadd6"
+    },
+    "text_simple": "Вам потребуется 2 личные фотографии на белом фоне, в черно-белом или цветном исполнении, размером 3,5 на 4,5 см, с четким изображением лица строго в анфас, без головного убора. Площадь лица должна занимать 80 процентов фотографии. Для граждан, постоянно носящих очки, обязательно фотографирование в очках. Фотографии в форменной одежде не принимаются. Не допускается предоставление фотографий с отредактированным изображением с целью улучшения внешнего вида или его художественной обработки. Фотографии должны соответствовать возрасту человека на день подачи заявления. Не допускается предоставление фотографий с линзами, изменяющими натуральный цвет глаз.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/38.mp4",
+    "children": null,
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon34.svg"
+  },
+
+  {
+    "_id": {
+      "$oid": "6659dc04fd5050af39ccd87a"
+    },
+    "text_simple": "Отметки в паспорте",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/39.mp4",
+    "children": null,
+    "info_children": [
+      {
+        "$oid": "6659dcb74122a6d016dea449"
+      }
+    ],
+    "is_searchable": true,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon39.svg"
+  },
+  {
+    "_id": {
+      "$oid": "6659dcb74122a6d016dea449"
+    },
+    "text_simple": "Обязательными отметками в паспорте являются: о регистрации гражданина по месту жительства и снятии его с регистрационного учета; об отношении к воинской обязанности граждан мужского пола, достигших 18 летнего возраста. По желанию гражданина в паспорте производятся отметки: о регистрации и расторжении брака; о детях (гражданах Российской Федерации, не достигших 14 летнего возраста); о ранее выданных паспортах; о выданных действительных заграничных паспортах; о группе крови и резус-факторе; номер ИНН.",
+    "video_url": "https://storage.yandexcloud.net/akhidov-ivr/40.mp4",
+    "children": null,
+    "info_children": null,
+    "is_searchable": false,
+    "icon_url": "https://storage.yandexcloud.net/akhidov-ivr/icon39.svg"
+  }]

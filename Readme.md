@@ -22,3 +22,6 @@ docker-compose down
 ```bash
 docker-compose down --remove-orphans
 ```
+# Документация
+ссылка на swagger-документацию: http://62.84.112.172:8080/swagger-ui/index.html
+ссылка на backend: https://pincode-dev.ru/ivr-hor/

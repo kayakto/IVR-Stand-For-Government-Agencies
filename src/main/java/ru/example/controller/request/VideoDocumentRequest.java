@@ -4,7 +4,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import org.bson.types.ObjectId;
 import ru.example.model.VideoDocument;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @AllArgsConstructor
 @Data
@@ -22,19 +26,17 @@ public class VideoDocumentRequest {
     @Schema(description = "Массив с идентификаторами дополнительной информации", example = "null")
     private final String[] infoChildren;
     @Schema(description = "Флаг, показывающий, можно ли искать данный документ", example = "true")
-    private final boolean searchable;
+    private final Boolean searchable;
     @Schema(description = "Ссылка на иконку", example = "https://storage.yandexcloud.net/akhidov-ivr/icon5.png")
-    private final String iconUrl;
+    private final String iconURL;
 
     public VideoDocument toVideoDocument(){
-        return new VideoDocument(
-                this.id,
-                this.textSimple,
-                this.videoURL,
-                this.children,
-                this.infoChildren,
-                this.searchable,
-                this.iconUrl
-        );
+        return new VideoDocument(id,
+                textSimple,
+                videoURL,
+                children,
+                infoChildren,
+                searchable,
+                iconURL);
     }
 }

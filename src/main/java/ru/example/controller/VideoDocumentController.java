@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import ru.example.controller.dto.VideoDocumentDTO;
+import ru.example.controller.request.UpdateRequest;
 import ru.example.controller.request.VideoDocumentRequest;
 import ru.example.model.VideoDocument;
 import ru.example.service.VideoDocumentService;
@@ -100,17 +101,16 @@ public class VideoDocumentController {
             result.add(foundedDocument.toVideoDocumentDTO());
         }
 
-        // if (result.isEmpty()) return ResponseEntity.noContent().build();
         return ResponseEntity.ok(result);
     }
 
     @DeleteMapping("/delete/{objectId}")
     @Operation(summary = "Метод удаления документа по его идентификатору")
-    public ResponseEntity<String> deleteById(
+    public ResponseEntity<Boolean> deleteById(
             @Parameter(description = "Идентификатор записи в базе данных", example = "664f97eec3c04a261d74e2ae")
             @PathVariable("objectId")
             String objectId) {
-        String message = videoDocumentService.deleteById(objectId);
+        boolean message = videoDocumentService.deleteById(objectId);
         return ResponseEntity.ok(message);
     }
 
@@ -127,5 +127,27 @@ public class VideoDocumentController {
         if (!idMap.isEmpty())
             return ResponseEntity.ok(idMap);
         return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/update/{id}")
+    @Operation(summary = "Метод обновления одного поля документа в базе данных")
+    public ResponseEntity<VideoDocumentDTO> updateDocument(
+            @PathVariable
+            @Parameter(description = "Идентификатор записи в базе данных", example = "664f97eec3c04a261d74e2ae")
+            String id,
+            @RequestBody UpdateRequest updateRequest) {
+        String fieldName = updateRequest.getFieldName();
+        Object newValue = updateRequest.getNewValue();
+        try {
+            VideoDocument updatedDocument = videoDocumentService.updateFieldById(id, fieldName, newValue);
+            if (updatedDocument == null) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(updatedDocument.toVideoDocumentDTO());
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 }

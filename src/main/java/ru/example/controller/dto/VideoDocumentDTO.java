@@ -3,7 +3,11 @@ package ru.example.controller.dto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.bson.types.ObjectId;
 import ru.example.model.VideoDocument;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -20,9 +24,15 @@ public class VideoDocumentDTO { // maybe record???
     @Schema(description = "Массив с идентификаторами дополнительной информации", example = "null")
     private final String[] infoChildren;
     @Schema(description = "Ссылка на иконку", example = "https://storage.yandexcloud.net/akhidov-ivr/icon5.png")
-    private final String iconUrl;
+    private final String iconURL;
 
-    public VideoDocument toVideoDocument(boolean isSearchable) {
-        return new VideoDocument(id, textSimple, videoURL, children, infoChildren, isSearchable, iconUrl);
+    public VideoDocument toVideoDocument(Boolean isSearchable) {
+        return new VideoDocument(id,
+                textSimple,
+                videoURL,
+                children,
+                infoChildren,
+                isSearchable,
+                iconURL);
     }
 }

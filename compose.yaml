@@ -16,7 +16,7 @@ services:
     networks:
       - main-network
 
-  api-ivr-hor:
+  api-java-ivr-hor:
     container_name: 'java-spring'
     build:
       context: .
@@ -26,6 +26,8 @@ services:
       BASE_URL: https://pincode-dev.ru/ivr-hor
       SPRINGDOC_SWAGGER_UI_PATH: /swagger-ui.html
       SPRINGDOC_API_DOCS_PATH: /v3/api-docs
+      SPRINGDOC_SWAGGER_UI_CONFIG_URL: /v3/api-docs/swagger-config
+      SPRINGDOC_SWAGGER_UI_URL: /v3/api-docs
       FLASK_API_URL: http://api-flask-vector:5005
 #      SERVER_SERVLET_CONTEXT_PATH: /ivr-hor
     ports:
