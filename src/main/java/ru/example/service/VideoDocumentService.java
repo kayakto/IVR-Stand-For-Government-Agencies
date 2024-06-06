@@ -79,13 +79,16 @@ public class VideoDocumentService {
 
     public boolean deleteById(String id) {
         VideoDocument documentToDelete = findById(id);
-        if (documentToDelete == null) {
-            return false;
-        } else if (!documentToDelete.getIsSearchable()){
+        boolean result = false;
+
+        if (documentToDelete != null) {
+            if (documentToDelete.getIsSearchable()) {
+                result = deleteFromSearch(id);
+            }
             repository.deleteById(id);
-            return true;
         }
-        return deleteFromSearch(id);
+
+        return result; // TODO false, если удалили из векторного поиска
     }
 
     /**

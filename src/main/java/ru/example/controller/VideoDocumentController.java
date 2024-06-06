@@ -28,10 +28,8 @@ public class VideoDocumentController {
     private VideoDocumentService videoDocumentService;
 
     private final List<String> MainVideoDocumentsIds = List.of(new String[]{
-            "6612ad7253c466832b383ae7",
-            "6617e4ba6182526904884fab",
-            "661815b06182526904884fd0",
-            "661fdaf161a7adbdc4a02360"
+            "6659c55ebbc8ff905fd7e61a",
+            "6659d57e67313ea32ccbef4a"
     }); //TODO not all ids
 
     @GetMapping("/main")
@@ -44,7 +42,7 @@ public class VideoDocumentController {
     @Operation(summary = "Метод получения одного дочернего документа по идентификатору")
     @ApiResponses(value = { @ApiResponse(responseCode = "204", description = "No Content", content = @Content(mediaType = "application/json"))})
     public ResponseEntity<VideoDocumentDTO> getVideoDocument(
-            @Parameter(description = "Уникальный идентификатор документа", example = "66141d446df3a0792d1c2fe7")
+            @Parameter(description = "Уникальный идентификатор документа", example = "6659d7e53e980cbfb95dcd54")
             @PathVariable("id") String id){
         VideoDocument document = videoDocumentService.findById(id);
 
@@ -107,7 +105,7 @@ public class VideoDocumentController {
     @DeleteMapping("/delete/{objectId}")
     @Operation(summary = "Метод удаления документа по его идентификатору")
     public ResponseEntity<Boolean> deleteById(
-            @Parameter(description = "Идентификатор записи в базе данных", example = "664f97eec3c04a261d74e2ae")
+            @Parameter(description = "Идентификатор записи в базе данных", example = "6659d7e53e980cbfb95dcd54")
             @PathVariable("objectId")
             String objectId) {
         boolean message = videoDocumentService.deleteById(objectId);
@@ -133,7 +131,7 @@ public class VideoDocumentController {
     @Operation(summary = "Метод обновления одного поля документа в базе данных")
     public ResponseEntity<VideoDocumentDTO> updateDocument(
             @PathVariable
-            @Parameter(description = "Идентификатор записи в базе данных", example = "664f97eec3c04a261d74e2ae")
+            @Parameter(description = "Идентификатор записи в базе данных", example = "6659d7e53e980cbfb95dcd54")
             String id,
             @RequestBody UpdateRequest updateRequest) {
         String fieldName = updateRequest.getFieldName();

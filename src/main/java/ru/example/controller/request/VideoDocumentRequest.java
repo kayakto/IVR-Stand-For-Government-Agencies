@@ -15,19 +15,19 @@ import java.util.List;
 @Getter
 @Schema(description = "Информация о видео-документе, запрашиваемая для добавления")
 public class VideoDocumentRequest {
-    @Schema(description = "Идентификатор", example = "6612b06653c466832b383aeb")
+    @Schema(description = "Идентификатор", example = "6659d643039023acf1059717")
     private final String id;
-    @Schema(description = "Текст на простом языке", example = "Внесение изменений в паспорт старого образца/Вписать детей в загранпаспорт")
+    @Schema(description = "Текст на простом языке", example = "Достижение 20 лет/Достижение 45 лет")
     private final String textSimple;
-    @Schema(description = "Ссылка на видео", example = "https://storage.yandexcloud.net/akhidov-ivr/long.mp4")
+    @Schema(description = "Ссылка на видео", example = "https://storage.yandexcloud.net/akhidov-ivr/22.mp4")
     private final String videoURL;
-    @Schema(description = "Массив дочерних записей", example = "[\"661415256df3a0792d1c2fe3\"]")
+    @Schema(description = "Массив дочерних записей", example = "[\"6659d7e53e980cbfb95dcd54\"]")
     private final String[] children;
-    @Schema(description = "Массив с идентификаторами дополнительной информации", example = "null")
+    @Schema(description = "Массив с идентификаторами дополнительной информации", example = "[]")
     private final String[] infoChildren;
     @Schema(description = "Флаг, показывающий, можно ли искать данный документ", example = "true")
     private final Boolean searchable;
-    @Schema(description = "Ссылка на иконку", example = "https://storage.yandexcloud.net/akhidov-ivr/icon5.png")
+    @Schema(description = "Ссылка на иконку", example = "https://storage.yandexcloud.net/akhidov-ivr/icon22.svg")
     private final String iconURL;
 
     public VideoDocument toVideoDocument(){

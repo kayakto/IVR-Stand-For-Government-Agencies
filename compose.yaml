@@ -1,9 +1,9 @@
 # version: '3.8'
 
 services:
-  database_mongoDB:
+  database_mongo:
     image: mongo:latest
-    container_name: "database_mongoDB"
+    container_name: "database_mongo"
     ports:
       - '27017:27017'
     restart: always
@@ -16,14 +16,14 @@ services:
     networks:
       - main-network
 
-  api-java-ivr-hor:
-    container_name: 'java-spring'
+  api-java-ivr:
+    container_name: 'java-spring-ivr'
     build:
       context: .
       dockerfile: Dockerfile-java
     environment:
-      SPRING_DATA_MONGODB_URI: mongodb://user:pwd@database_mongoDB:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
-      BASE_URL: https://pincode-dev.ru/ivr-hor
+      SPRING_DATA_MONGODB_URI: mongodb://user:pwd@database_mongo:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
+#      BASE_URL: https://pincode-dev.ru/ivr-hor
       SPRINGDOC_SWAGGER_UI_PATH: /swagger-ui.html
       SPRINGDOC_API_DOCS_PATH: /v3/api-docs
       SPRINGDOC_SWAGGER_UI_CONFIG_URL: /v3/api-docs/swagger-config
@@ -41,7 +41,7 @@ services:
       context: .
       dockerfile: Dockerfile-flask
     environment:
-      MONGO_URI: mongodb://user:pwd@database_mongoDB:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
+      MONGO_URI: mongodb://user:pwd@database_mongo:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
     ports:
       - "5005:5005"
     networks:
