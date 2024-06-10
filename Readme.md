@@ -11,9 +11,9 @@
     ```bash
     docker compose up -d
     ```
+Приложение весит более 6 гб, первый запуск будет долгим!
 Приложение будет доступно по адресу http://localhost:8080 
 Документация расположена по адресу http://localhost:8080/ivr-hor/swagger-ui/index.html#
-
 Чтобы остановить приложение и удалить контейнеры:
 ```bash
 docker-compose down
@@ -23,5 +23,5 @@ docker-compose down
 docker-compose down --remove-orphans
 ```
 # Документация
-ссылка на swagger-документацию: http://62.84.112.172:8080/swagger-ui/index.html
-ссылка на backend: https://pincode-dev.ru/ivr-hor/
+ссылка на swagger-документацию на сервере: http://62.84.112.172:8080/swagger-ui/index.html
+ссылка на backend-сервер: https://pincode-dev.ru/ivr-hor/

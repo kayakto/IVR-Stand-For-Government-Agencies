@@ -16,8 +16,8 @@ services:
     networks:
       - main-network
 
-  api-java-ivr:
-    container_name: 'java-spring-ivr'
+  api-java-ivr-hor:
+    container_name: 'java-spring-ivr-hor'
     build:
       context: .
       dockerfile: Dockerfile-java
@@ -29,9 +29,9 @@ services:
       SPRINGDOC_SWAGGER_UI_CONFIG_URL: /v3/api-docs/swagger-config
       SPRINGDOC_SWAGGER_UI_URL: /v3/api-docs
       FLASK_API_URL: http://api-flask-vector:5005
-#      SERVER_SERVLET_CONTEXT_PATH: /ivr-hor
     ports:
       - "8080:8080"
+    restart: always
     networks:
       - main-network
 
@@ -44,6 +44,7 @@ services:
       MONGO_URI: mongodb://user:pwd@database_mongo:27017/assistiveServiseIVR?authSource=assistiveServiseIVR
     ports:
       - "5005:5005"
+    restart: always
     networks:
       - main-network
 

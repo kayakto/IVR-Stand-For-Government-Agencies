@@ -104,7 +104,6 @@ def delete_doc():
     if not doc_id:
         return jsonify({"error": "No id provided"}), 400
 
-
     try:
         idx = ids.index(doc_id)  # Преобразование ObjectId в строку
     except ValueError:
@@ -120,4 +119,4 @@ def delete_doc():
     return jsonify({"id": doc_id, "status": "deleted"}), 200
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5005) #тут я поменял хост
+    app.run('0.0.0.0', port=5005)
